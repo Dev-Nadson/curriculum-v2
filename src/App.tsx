@@ -7,16 +7,23 @@ import { TechStack } from "./components/TechStack"
 import { USER } from "./data"
 
 function App() {
-  const { AboutMe: aboutContent, Academics: academicsContent } = USER
+  const {
+    AboutMe: aboutContent,
+    Academics: academicsContent,
+    Experiences: workExperienceContent,
+    TechStack: techStackContent
+  } = USER
+
+  const projectContent = false
 
   return (
     <>
       <Header />
       {aboutContent && <AboutMe content={aboutContent} />}
-      <WorkExperience />
+      {workExperienceContent && <WorkExperience contents={workExperienceContent} />}
       {academicsContent && <Academic contents={academicsContent} />}
-      <Projects />
-      <TechStack />
+      {projectContent && <Projects />}
+      {techStackContent && <TechStack content={techStackContent} />}
     </>
   )
 }
