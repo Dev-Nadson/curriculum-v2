@@ -4,24 +4,28 @@ import { WorkExperience } from "./components/WorkExperience"
 import { Academic } from "./components/Academic"
 import { Projects } from "./components/Projects"
 import { TechStack } from "./components/TechStack"
-import { USER } from "./data"
+import { ANAJULIA } from "./data"
+import { Certifications } from "./components/Certifications"
 
 function App() {
   const {
+    Header: headerContent,
     AboutMe: aboutContent,
-    Academics: academicsContent,
     Experiences: workExperienceContent,
+    Academics: academicsContent,
+    Certifications: certificationsContent,
     TechStack: techStackContent
-  } = USER
+  } = ANAJULIA
 
   const projectContent = false
 
   return (
     <>
-      <Header />
+      <Header content={headerContent} />
       {aboutContent && <AboutMe content={aboutContent} />}
       {workExperienceContent && <WorkExperience contents={workExperienceContent} />}
       {academicsContent && <Academic contents={academicsContent} />}
+      {certificationsContent && <Certifications contents={certificationsContent} />}
       {projectContent && <Projects />}
       {techStackContent && <TechStack content={techStackContent} />}
     </>

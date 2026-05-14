@@ -1,104 +1,80 @@
-import { Github, Linkedin, Mail, Phone, type LucideIcon } from "lucide-react";
-
-export interface ILinkProps {
-    icon: LucideIcon
-    text: string
-    url: string
-    link?: boolean
-}
-
-export interface IExperienceProps {
-    description: string[]
-    enterprise?: string
-    role: string
-    worktype?: string
-    date: string
-}
-
-export interface IAcademicProps {
-    description?: string
-    school: string
-    date: string
-    title: string
-}
-
-export interface ICompetencesProps {
-    data: string[]
-}
+import { Github, Globe, Linkedin, Mail, Phone } from "lucide-react";
+import type { IAcademicProps, ICertificationsProps, ICompetencesProps, IExperienceProps } from "../typings";
+import type { IHeaderProps } from "../typings";
 
 interface Data {
-    Name: string
-    Subtitle: string
-    Links: ILinkProps[]
+    Header: IHeaderProps
     AboutMe?: string
     Experiences?: IExperienceProps[]
-    Academics: IAcademicProps[]
-    TechStack: ICompetencesProps
+    Academics?: IAcademicProps[]
+    Certifications?: ICertificationsProps[]
+    TechStack?: ICompetencesProps
 }
 
-//export const USER: Data = {
-//    Nome: "PEDRO HENRIQUE DE O. DA SILVA",
-//    Links: [
-//        { icon: Phone, text: "(81) 989785231", url: "", link: true },
-//        { icon: Mail, text: "pedrohenrique20059980@gmail.com", url: "mailto:pedrohenrique20059980@gmail.com", link: true },
-//        { icon: Linkedin, text: "PedroHenriqueOSilva", url: "https://github.com/PedroHenriqueOSilva", link: true },
-//        { icon: Github, text: "Pedro Henrique", url: "https://www.linkedin.com/in/pedro-henrique-7427b4261", link: true }
-//    ],
-//    Sobre: "Possuo com três anos de experiência em suporte técnico e atendimento ao usuário, atuando com manutenção de hardware, diagnóstico de sistemas e substituição de componentes. Em transição de carreira para a área de Desenvolvimento Web, com foco no aprendizado e aplicação de Python na resolução de problemas e no desenvolvimento de soluções. Perfil proativo, organizado e com facilidade para trabalho em equipe.",
-//    Experiencias: [
-//        {
-//            enterprise: "MASTERDRIVE IMPORTAÇÃO",
-//            date: "Janeiro 2023 - Atual",
-//            role: "Auxiliar Administrativo - Suporte em TI",
-//            worktype: "Presencial",
-//            description: [
-//                "- Gerenciei o sistema ERP da empresa, prestando suporte técnico, realizando configurações e treinando aproximadamente 20 usuários, garantindo a utilização eficiente, contínua e padronizada da plataforma.",
-//                "- Executei a montagem, manutenção e reparo de mais de 30 máquinas, além da estruturação, cabeamento e organização da rede corporativa, assegurando estabilidade, desempenho e padronização da infraestrutura de TI.",
-//                "- Liderei o setor de helpdesk, oferecendo suporte direto aos colaboradores em demandas de hardware, software e conectividade, reduzindo falhas operacionais e garantindo o pleno funcionamento dos recursos tecnológicos da empresa.",
-//            ]
-//        }
-//    ],
-//    CursosEFormacoes: [
-//        {
-//            title: "Bacharelado em Ciências da Computação",
-//            school: "UNIFAVIP WYDEN",
-//            date: "Fev 2025 - Atual",
-//            description: "Redes de Computadores, Arquitetura de Computadores, Programação de Software em C, Estrutura de Dados, Computação em Nuvem, Git, Github"
-//        },
-//        {
-//            title: "Programação de Software",
-//            school: "UNICESUMAR",
-//            date: "440 Horas - 2022",
-//            description: "JavaScript, HTML, CSS"
-//        },
-//        {
-//            title: "Python e Algortimos",
-//            school: "Curso em Vídeo",
-//            date: "80 Horas",
-//            description: "Lógica de Programação, Programação Orientada a Objeto"
-//        },
-//        {
-//            title: "Ensino Médio",
-//            school: "SESI - JOSÉ RANULFO DA COSTA QUEIROZ",
-//            date: "Fev 2025 - Atual",
-//        }
-//    ]
-//}
-
-export const USER: Data = {
-    Name: "NADSON ALEX DA SILVA",
-    Subtitle: "Desenvolvedor Fullstack | Especialista em Node.js, React e TypeScript",
-    Links: [
-        { icon: Phone, text: "(81) 98978-5231", url: "tel:+5581989785231", link: true },
-        { icon: Mail, text: "nadson.pros@gmail.com", url: "mailto:nadson.pros@gmail.com", link: true },
-        { icon: Linkedin, text: "linkedin.com/in/nadson-alex", url: "https://linkedin.com/in/nadson-alex", link: true },
-        { icon: Github, text: "github.com/Dev-Nadson", url: "https://github.com/Dev-Nadson", link: true },
-        // { icon: MapPin, text: "Caruaru, PE", url: "", link: false }
+export const PEDRO: Data = {
+    Header: {
+        Name: "PEDRO HENRIQUE DE O. DA SILVA",
+        Links: [
+            { icon: Phone, text: "(81) 989785231", url: "", link: true },
+            { icon: Mail, text: "pedrohenrique20059980@gmail.com", url: "mailto:pedrohenrique20059980@gmail.com", link: true },
+            { icon: Linkedin, text: "PedroHenriqueOSilva", url: "https://github.com/PedroHenriqueOSilva", link: true },
+            { icon: Github, text: "Pedro Henrique", url: "https://www.linkedin.com/in/pedro-henrique-7427b4261", link: true }
+        ]
+    },
+    AboutMe: "Possuo com três anos de experiência em suporte técnico e atendimento ao usuário, atuando com manutenção de hardware, diagnóstico de sistemas e substituição de componentes. Em transição de carreira para a área de Desenvolvimento Web, com foco no aprendizado e aplicação de Python na resolução de problemas e no desenvolvimento de soluções. Perfil proativo, organizado e com facilidade para trabalho em equipe.",
+    Experiences: [
+        {
+            enterprise: "MASTERDRIVE IMPORTAÇÃO",
+            date: "Janeiro 2023 - Atual",
+            role: "Auxiliar Administrativo - Suporte em TI",
+            worktype: "Presencial",
+            description: [
+                "- Gerenciei o sistema ERP da empresa, prestando suporte técnico, realizando configurações e treinando aproximadamente 20 usuários, garantindo a utilização eficiente, contínua e padronizada da plataforma.",
+                "- Executei a montagem, manutenção e reparo de mais de 30 máquinas, além da estruturação, cabeamento e organização da rede corporativa, assegurando estabilidade, desempenho e padronização da infraestrutura de TI.",
+                "- Liderei o setor de helpdesk, oferecendo suporte direto aos colaboradores em demandas de hardware, software e conectividade, reduzindo falhas operacionais e garantindo o pleno funcionamento dos recursos tecnológicos da empresa.",
+            ]
+        }
     ],
+    Academics: [
+        {
+            title: "Bacharelado em Ciências da Computação",
+            school: "UNIFAVIP WYDEN",
+            date: "Fev 2025 - Atual",
+            description: "Redes de Computadores, Arquitetura de Computadores, Programação de Software em C, Estrutura de Dados, Computação em Nuvem, Git, Github"
+        },
+        {
+            title: "Programação de Software",
+            school: "UNICESUMAR",
+            date: "440 Horas - 2022",
+            description: "JavaScript, HTML, CSS"
+        },
+        {
+            title: "Python e Algortimos",
+            school: "Curso em Vídeo",
+            date: "80 Horas",
+            description: "Lógica de Programação, Programação Orientada a Objeto"
+        },
+        {
+            title: "Ensino Médio",
+            school: "SESI - JOSÉ RANULFO DA COSTA QUEIROZ",
+            date: "Fev 2025 - Atual",
+        }
+    ]
+}
 
+export const NADSON: Data = {
+    Header: {
+        Name: "NADSON ALEX DA SILVA",
+        Subtitle: "Desenvolvedor Fullstack | Especialista em Node.js, React e TypeScript",
+        Links: [
+            { icon: Phone, text: "(81) 98978-5231", url: "tel:+5581989785231", link: true },
+            { icon: Mail, text: "nadson.pros@gmail.com", url: "mailto:nadson.pros@gmail.com", link: true },
+            { icon: Linkedin, text: "linkedin.com/in/nadson-alex", url: "https://linkedin.com/in/nadson-alex", link: true },
+            { icon: Github, text: "github.com/Dev-Nadson", url: "https://github.com/Dev-Nadson", link: true },
+        ]
+    },
     AboutMe:
-        "Desenvolvedor Fullstack com 2+ anos de experiência construindo aplicações web escaláveis, especializado em Node.js, React e TypeScript. Reduzi tempo de resposta de APIs em 40% e melhorei performance de aplicações frontend em 35% através de otimizações de código e arquitetura. Graduando em Ciência da Computação (PROUNI integral) com histórico comprovado de entrega de soluções que impactam positivamente métricas de negócio e experiência do usuário.",
-
+        "Desenvolvedor Fullstack com 1+ anos de experiência construindo aplicações web escaláveis, especializado em Node.js, React e TypeScript. Reduzi tempo de resposta de APIs em 40% e melhorei performance de aplicações frontend em 35% através de otimizações de código e arquitetura. Graduando em Ciência da Computação (PROUNI integral) com histórico comprovado de entrega de soluções que impactam positivamente métricas de negócio e experiência do usuário.",
     Experiences: [
         {
             enterprise: "CATSUC LABS",
@@ -116,7 +92,6 @@ export const USER: Data = {
                 "Aumentei cobertura de testes de 12% para 67% ao implementar testes unitários e de integração com Vitest, detectando 15+ bugs críticos antes de produção"
             ]
         },
-
         {
             enterprise: "Empresa Confidencial",
             date: "Julho 2025 - Maio 2026",
@@ -175,6 +150,109 @@ export const USER: Data = {
             "Frontend: React, Next.js 14, Vite, TypeScript, TailwindCSS, Shadcn UI, React Hook Form, Zod, Radix UI, Framer Motion",
             "DevOps & Infra: Docker, Docker Compose, Linux (Ubuntu, CentOS), Nginx, CI/CD, Git, GitHub Actions",
             "Testing & Tools: Vitest, Jest, Axios, Python (Pandas, Typer), REST APIs, WebSockets, Postman, VS Code"
+        ]
+    }
+}
+
+export const ANAJULIA: Data = {
+    Header: {
+        Name: "ANA JÚLIA ALVES DA SILVA",
+        Subtitle: "Acadêmica em Farmácia e Atendimento ao Público",
+        Links: [
+            { icon: Phone, text: "(81) 99745-8420", url: "", link: true },
+            { icon: Mail, text: "anajuliaalvesdasilva00@gmail.com", url: "mailto:anajuliaalvesdasilva00@gmail.com", link: true },
+            { icon: Linkedin, text: "linkedin.com/in/farm-ana-julia", url: "https://www.linkedin.com/in/farm-ana-julia", link: true },
+            { icon: Globe, text: "Currículo Lattes", url: "https://lattes.cnpq.br/9584098191647265", link: true },
+        ]
+    },
+    AboutMe:
+        "Acadêmica em Farmácia pela UNIFAVIP Wyden, bolsista integral PROUNI e Presidente da Liga Acadêmica de Farmácia Clínica (LAFAC). Busco estágio em farmácia clínica, hospitalar ou de manipulação para aplicar e aprofundar conhecimentos em atenção farmacêutica, segurança do paciente e cuidado humanizado. Tenho experiência prática em aferição de pressão arterial, orientação em saúde e atendimento ao público, além de atuação acadêmica reconhecida com premiação Top Student 2025 e menção honrosa em resumo científico.",
+    Experiences: [
+        {
+            enterprise: "Autônoma",
+            date: "Março 2025 - Atual",
+            role: "Promotora de Eventos",
+            worktype: "Presencial",
+            description: [
+                "- Promovi estabelecimentos por meio da distribuição de mais de 800 panfletos diários, utilizando abordagem simpática e comunicação eficiente com o público",
+                "- Realizei ações de degustação para promoção de produtos, atendendo mais de 80 pessoas diariamente e aumentando o interesse dos consumidores",
+                "- Participei de ações práticas como estudante de Farmácia, incluindo limpeza de pele, aferição de pressão arterial e orientações básicas em saúde",
+                "- Ofereci atendimento humanizado ao público, buscando orientar e proporcionar uma experiência positiva aos participantes das ações"
+            ]
+        },
+        {
+            enterprise: "Cursinho Exatas",
+            date: "Março 2023 - Fevereiro 2024",
+            role: "Auxiliar de Professor",
+            worktype: "Presencial",
+            description: [
+                "- Acompanhei turmas da alfabetização infantil ao ensino médio, com foco em Matemática, Física e Química, oferecendo suporte personalizado aos alunos",
+                "- Identifiquei dificuldades específicas de aprendizagem e adaptei explicações para melhorar engajamento e compreensão dos estudantes",
+                "- Mantive comunicação constante com pais e professores, contribuindo para maior alinhamento pedagógico e evolução acadêmica",
+                "- Auxiliei na organização das demandas do cursinho preparatório, colaborando para aumento da procura pelo curso"
+            ]
+        },
+        {
+            enterprise: "Lanchone Central",
+            date: "Janeiro 2022 - Janeiro 2023",
+            role: "Balconista e Operadora de Caixa",
+            worktype: "Presencial",
+            description: [
+                "- Realizei atendimento direto ao público, garantindo agilidade, organização e atenção durante o serviço",
+                "- Atuei em operações de caixa, preparo de pedidos e controle básico de estoque seguindo procedimentos organizacionais",
+                "- Fui responsável pela abertura e fechamento do estabelecimento, assegurando o funcionamento diário da unidade",
+                "- Desenvolvi habilidades de comunicação, resolução de problemas e trabalho sob pressão em ambiente de alta demanda"
+            ]
+        }
+    ],
+
+    Academics: [
+        {
+            title: "Bacharelado em Farmácia",
+            school: "UNIFAVIP WYDEN",
+            date: "Fevereiro 2024 - Dezembro 2028",
+            description:
+                "Bolsista integral PROUNI. Formação voltada para Farmácia Clínica, Atenção Farmacêutica, cuidado ao paciente e práticas laboratoriais. Presidente da Liga Acadêmica de Farmácia Clínica (LAFAC), participando ativamente de ações acadêmicas e práticas extensionistas."
+        },
+        {
+            title: "Ensino Médio Completo",
+            school: "Escola de Referência em Ensino Médio de Panelas",
+            date: "Fevereiro 2020 - Dezembro 2022",
+            description:
+                "Formação concluída com participação ativa em atividades acadêmicas e desenvolvimento de habilidades interpessoais e organizacionais."
+        }
+    ],
+    Certifications: [
+        {
+            title: "Unifavip Top Student 2025 - Farmácia",
+            institution: "UNIFAVIP WYDEN",
+            date: "2025",
+            description: "Premiação concedida ao estudante com melhor desempenho acadêmico do curso de Farmácia, reconhecendo dedicação e excelência nos estudos."
+        },
+        {
+            title: "Menção Honrosa em Resumo Científico",
+            institution: "UNIFAVIP WYDEN",
+            date: "2025",
+            description: "Distinção acadêmica pelo trabalho \"O Papel da Farmácia Clínica e da Atenção Farmacêutica na Segurança do Paciente Hospitalar\", destacando contribuição relevante para a área clínica."
+        },
+        {
+            title: "Minicurso - Desvendando as Interações Medicamentosas",
+            institution: "UNIFAVIP WYDEN",
+            date: "2025",
+            description: "Capacitação prática sobre identificação e manejo de interações medicamentosas, com abordagem clínica voltada à segurança do paciente."
+        }
+    ],
+    TechStack: {
+        data: [
+            "- Atenção Farmacêutica e Seguimento Farmacoterapêutico",
+            "- Orientação de Uso Racional de Medicamentos",
+            "- Aferição de Pressão Arterial",
+            "- Identificação de Interações Medicamentosas",
+            "- Atendimento Humanizado ao Paciente",
+            "- Comunicação Interpessoal",
+            "- Educação em Saúde",
+            "- Organização e Trabalho em Equipe",
+            "- Inglês Instrumental (leitura científica)"
         ]
     }
 }

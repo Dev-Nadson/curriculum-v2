@@ -12,7 +12,7 @@ export function PageContainer({ children, ...props }: React.ComponentProps<'body
 export function CurriculumContainer({ children, ...props }: React.ComponentProps<'div'>) {
     return (
         <div {...props} className='w-185 h-screen'>
-            <div className='flex flex-col gap-2 my-4'>
+            <div className='flex flex-col gap-2 mb-4'>
                 {children}
             </div>
         </div>
