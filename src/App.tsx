@@ -4,7 +4,7 @@ import { WorkExperience } from "./components/WorkExperience"
 import { Academic } from "./components/Academic"
 import { Projects } from "./components/Projects"
 import { TechStack } from "./components/TechStack"
-import { ANAJULIA } from "./data"
+import { NADSON } from "./data"
 import { Certifications } from "./components/Certifications"
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     Academics: academicsContent,
     Certifications: certificationsContent,
     TechStack: techStackContent
-  } = ANAJULIA
+  } = NADSON
 
   const projectContent = false
 
