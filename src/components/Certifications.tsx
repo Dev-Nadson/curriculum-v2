@@ -1,4 +1,4 @@
-import type { ICertificationsProps } from "../typings";
+import type { ICertificationsProps } from "@/typings";
 import { Separator, SessionContainer } from "./ui/Page";
 
 export function Certifications({ contents }: { contents: ICertificationsProps[] }) {

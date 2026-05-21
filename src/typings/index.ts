@@ -33,6 +33,10 @@ export type ICompetencesProps = {
     data: string[]
 }
 
+export type ITechStackProps = {
+    data: string[]
+}
+
 export type IHeaderProps = {
     Name: string
     Subtitle?: string

@@ -6,6 +6,7 @@ import { Projects } from "./components/Projects"
 import { TechStack } from "./components/TechStack"
 import { NADSON } from "./data"
 import { Certifications } from "./components/Certifications"
+import { Competences } from "./components/Competences"
 
 function App() {
   const {
@@ -14,6 +15,7 @@ function App() {
     Experiences: workExperienceContent,
     Academics: academicsContent,
     Certifications: certificationsContent,
+    Competences: CompetencesContent,
     TechStack: techStackContent
   } = NADSON
 
@@ -27,6 +29,7 @@ function App() {
       {academicsContent && <Academic contents={academicsContent} />}
       {certificationsContent && <Certifications contents={certificationsContent} />}
       {projectContent && <Projects />}
+      {CompetencesContent && <Competences content={CompetencesContent} />}
       {techStackContent && <TechStack content={techStackContent} />}
     </>
   )

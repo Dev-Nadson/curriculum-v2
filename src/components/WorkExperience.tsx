@@ -1,4 +1,4 @@
-import type { IExperienceProps } from "../data";
+import type { IExperienceProps } from "../typings";
 import { Separator } from "./ui/Page";
 
 export function WorkExperience({ contents }: { contents: IExperienceProps[] }) {

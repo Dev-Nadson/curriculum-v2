@@ -1,17 +1,18 @@
 import { Github, Globe, Linkedin, Mail, Phone } from "lucide-react";
-import type { IAcademicProps, ICertificationsProps, ICompetencesProps, IExperienceProps } from "../typings";
+import type { IAcademicProps, ICertificationsProps, ICompetencesProps, IExperienceProps, ITechStackProps } from "../typings";
 import type { IHeaderProps } from "../typings";
 
-interface Data {
+interface ProfileData {
     Header: IHeaderProps
     AboutMe?: string
     Experiences?: IExperienceProps[]
     Academics?: IAcademicProps[]
     Certifications?: ICertificationsProps[]
-    TechStack?: ICompetencesProps
+    Competences?: ICompetencesProps
+    TechStack?: ITechStackProps
 }
 
-export const PEDRO: Data = {
+export const PEDRO: ProfileData = {
     Header: {
         Name: "PEDRO HENRIQUE DE O. DA SILVA",
         Links: [
@@ -62,7 +63,7 @@ export const PEDRO: Data = {
     ]
 }
 
-export const NADSON: Data = {
+export const NADSON: ProfileData = {
     Header: {
         Name: "NADSON ALEX DA SILVA",
         Subtitle: "Desenvolvedor Fullstack | Especialista em Node.js, React e TypeScript",
@@ -154,7 +155,7 @@ export const NADSON: Data = {
     }
 }
 
-export const ANAJULIA: Data = {
+export const ANAJULIA: ProfileData = {
     Header: {
         Name: "ANA JÚLIA ALVES DA SILVA",
         Subtitle: "Acadêmica em Farmácia e Atendimento ao Público",
@@ -242,7 +243,7 @@ export const ANAJULIA: Data = {
             description: "Capacitação prática sobre identificação e manejo de interações medicamentosas, com abordagem clínica voltada à segurança do paciente."
         }
     ],
-    TechStack: {
+    Competences: {
         data: [
             "- Atenção Farmacêutica e Seguimento Farmacoterapêutico",
             "- Orientação de Uso Racional de Medicamentos",

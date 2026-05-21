@@ -1,4 +1,4 @@
-import type { IHeaderProps, ILinkProps } from "../typings"
+import type { IHeaderProps, ILinkProps } from "@/typings"
 
 export function Header({ content }: { content: IHeaderProps }) {
 

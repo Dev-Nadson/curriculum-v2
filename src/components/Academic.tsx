@@ -1,4 +1,4 @@
-import type { IAcademicProps } from "../typings";
+import type { IAcademicProps } from "@/typings";
 import { Separator, SessionContainer } from "./ui/Page";
 
 export function Academic({ contents }: { contents: IAcademicProps[] }) {
