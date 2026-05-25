@@ -1,11 +1,13 @@
 import * as React from 'react'
+import { Outlet } from 'react-router-dom'
 import { cn } from '../../lib/utils'
 
-export function PageContainer({ children, ...props }: React.ComponentProps<'body'>) {
+export function PageContainer({ children, ...props }: React.ComponentProps<'div'>) {
     return (
-        <body {...props} className='flex items-center flex-col font-serif'>
+        <div {...props} className='flex items-center flex-col font-serif'>
             {children}
-        </body>
+            <Outlet />
+        </div>
     )
 }
 
@@ -14,6 +16,7 @@ export function CurriculumContainer({ children, ...props }: React.ComponentProps
         <div {...props} className='w-185 h-screen'>
             <div className='flex flex-col gap-2 mb-4'>
                 {children}
+                <Outlet />
             </div>
         </div>
     )

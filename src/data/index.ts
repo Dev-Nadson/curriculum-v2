@@ -89,15 +89,12 @@ export const NADSON: ProfileData = {
                 "Desenvolvi 8+ APIs REST com Node.js, Fastify e TypeScript processando 10.000+ requisições/dia, aplicando Clean Architecture e dependency injection para escalabilidade",
                 "Otimizei consultas SQL complexas com Knex.js reduzindo tempo de geração de relatórios de 8s para 1.2s através de índices, JOINs otimizados e caching estratégico no PostgreSQL",
                 "Reduzi tempo de setup de ambiente de desenvolvimento de 4h para 15min ao dockerizar aplicações com Docker Compose multi-stage, padronizando configurações entre 5 desenvolvedores",
-                "Implementei CI/CD em servidores Linux Ubuntu aumentando frequência de deploys de 1x/semana para 3x/dia, reduzindo downtime em 85% através de automação e health checks",
                 "Aumentei cobertura de testes de 12% para 67% ao implementar testes unitários e de integração com Vitest, detectando 15+ bugs críticos antes de produção"
             ]
         },
         {
-            enterprise: "Empresa Confidencial",
             date: "Julho 2025 - Maio 2026",
             role: "Técnico de Suporte em TI",
-            worktype: "Presencial",
             description: [
                 "Reduzi falhas de conexão com banco de dados em 94% (de 52 para 3 ocorrências mensais) ao monitorar servidores Linux Ubuntu/CentOS com scripts customizados e alertas proativos",
                 "Economizei 120+ horas/mês de trabalho manual ao desenvolver 5+ scripts Python com Pandas e Typer para automação de processos, incluindo geração de relatórios e processamento de dados em lote",
@@ -106,7 +103,6 @@ export const NADSON: ProfileData = {
                 "Aumentei satisfação do usuário final em 40% (NPS de 6.2 para 8.7) ao reduzir tempo de resposta de chamados de 6h para 2h através de priorização estratégica e comunicação proativa"
             ]
         },
-
         {
             enterprise: "PANIFICADORA JR",
             date: "Janeiro 2023 - Dezembro 2024",
