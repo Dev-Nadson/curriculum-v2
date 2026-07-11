@@ -20,7 +20,7 @@ export function WorkExperience({ contents }: { contents: IExperienceProps[] }) {
                         </header>
 
                         {content.description.map((item, i) => (
-                            <ul key={i} className="ml-5 pr-8 text-justify">
+                            <ul key={i} className="ml-5 pr-8">
                                 <li className="text-wrap mb-1.5 leading-4.5">
                                     {item}
                                 </li>

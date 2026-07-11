@@ -74,8 +74,7 @@ export const NADSON: ProfileData = {
             { icon: Github, text: "github.com/Dev-Nadson", url: "https://github.com/Dev-Nadson", link: true },
         ]
     },
-    AboutMe:
-        "Desenvolvedor Fullstack com 1+ anos de experiência construindo aplicações web escaláveis, especializado em Node.js, React e TypeScript. Reduzi tempo de resposta de APIs em 40% e melhorei performance de aplicações frontend em 35% através de otimizações de código e arquitetura. Graduando em Ciência da Computação (PROUNI integral) com histórico comprovado de entrega de soluções que impactam positivamente métricas de negócio e experiência do usuário.",
+    AboutMe: "Desenvolvedor Fullstack com foco em backend, especializado em Node.js, Fastify, TypeScript e PostgreSQL. Experiência no desenvolvimento de APIs REST multi-tenant, otimização de consultas SQL, estratégias de cache com Redis e aplicações React modernas. Graduando em Ciência da Computação (PROUNI integral).",
     Experiences: [
         {
             enterprise: "CATSUC LABS",
@@ -83,36 +82,37 @@ export const NADSON: ProfileData = {
             role: "Desenvolvedor Fullstack Júnior",
             worktype: "Presencial",
             description: [
-                "Aumentei a velocidade de desenvolvimento em 45% ao criar biblioteca interna com 25+ componentes React reutilizáveis (Button, Input, Select, Dialog) utilizando TypeScript, Radix UI e TailwindCSS, reduzindo código duplicado em 60%",
-                "Reduzi bugs de validação em 78% (de 23 para 5 por sprint) ao implementar formulários type-safe com React Hook Form + Zod, aplicando validações assíncronas e condicionais com superRefine",
-                "Melhorei performance de requisições em 35% ao centralizar comunicação com APIs REST via Axios com interceptors customizados, implementando retry logic e tratamento padronizado de erros em 15+ endpoints",
-                "Desenvolvi 8+ APIs REST com Node.js, Fastify e TypeScript processando 10.000+ requisições/dia, aplicando Clean Architecture e dependency injection para escalabilidade",
-                "Otimizei consultas SQL complexas com Knex.js reduzindo tempo de geração de relatórios de 8s para 1.2s através de índices, JOINs otimizados e caching estratégico no PostgreSQL",
-                "Reduzi tempo de setup de ambiente de desenvolvimento de 4h para 15min ao dockerizar aplicações com Docker Compose multi-stage, padronizando configurações entre 5 desenvolvedores",
-                "Aumentei cobertura de testes de 12% para 67% ao implementar testes unitários e de integração com Vitest, detectando 15+ bugs críticos antes de produção"
+                "Desenvolvi APIs REST multi-tenant com Node.js, Fastify e PostgreSQL, implementando isolamento por tenant, soft delete e controle de acesso aos dados.",
+                "Modelei a arquitetura relacional do PostgreSQL utilizando tabelas de associação e regras de integridade para suportar a evolução da aplicação.",
+                "Criei mais de 40 endpoints REST com Fastify, TypeScript e Zod utilizando arquitetura em camadas, validação type-safe e tratamento centralizado de erros, processando mais de 10.000 requisições por dia",
+                "Implementei cache com Redis (ioredis) em mais de 30 funcionalidades da aplicação, incluindo endpoints, serviços e persistência de dados, reduzindo a carga no PostgreSQL e melhorando o tempo de resposta.",
+                "Otimizei consultas SQL com Knex.js e SQL puro para relatórios analíticos, utilizando JOINs, agregações e relacionamentos complexos no PostgreSQL",
+                "Contribuí para uma biblioteca interna com mais de 25 componentes React reutilizáveis utilizando TypeScript, Radix UI e TailwindCSS, além de criar formulários com React Hook Form e Zod, aplicando validações condicionais com superRefine e reduzindo código duplicado em mais de 15 telas.",
+                "Implementei gerenciamento de estado assíncrono e cache com TanStack Query (React Query), utilizando queries, mutations e cache invalidation para otimizar requisições e melhorar a experiência do usuário",
+                "Elevei a cobertura de testes de 12% para 67% com testes unitários, integração (Vitest e Jest) e end-to-end (Supertest), reduzindo regressões e garantindo qualidade durante as entregas"
             ]
         },
         {
             date: "Julho 2025 - Maio 2026",
             role: "Técnico de Suporte em TI",
             description: [
-                "Reduzi falhas de conexão com banco de dados em 94% (de 52 para 3 ocorrências mensais) ao monitorar servidores Linux Ubuntu/CentOS com scripts customizados e alertas proativos",
-                "Economizei 120+ horas/mês de trabalho manual ao desenvolver 5+ scripts Python com Pandas e Typer para automação de processos, incluindo geração de relatórios e processamento de dados em lote",
-                "Diminuí tempo médio de resolução de incidentes críticos de 4h para 45min ao dominar diagnóstico com systemctl, journalctl, netstat e análise de logs em tempo real",
-                "Melhorei performance de queries PostgreSQL em 60% ao aplicar otimizações de índices e refatoração de consultas N+1, beneficiando 8+ sistemas internos",
-                "Aumentei satisfação do usuário final em 40% (NPS de 6.2 para 8.7) ao reduzir tempo de resposta de chamados de 6h para 2h através de priorização estratégica e comunicação proativa"
+                "Realizei manutenção preventiva e corretiva em mais de 300 máquinas virtuais Linux (Ubuntu e CentOS), garantindo disponibilidade superior a 97% em todos os ambientes",
+                "Automatizei mais de 18 processos operacionais com uma CLI em Python com Typer, Paramiko e Pydantic, economizando mais de 120 horas mensais e reduzindo tarefas de até 6 horas para cerca de 30 minutos",
+                "Realizei diagnóstico e resolução de incidentes em ambientes Linux utilizando ferramentas como systemctl, journalctl, netstat e análise de logs, reduzindo o tempo de identificação e correção de falhas críticas",
+                "Administrei mais de 200 configurações de rede utilizando Nginx e VyOS, implementando proxy reverso, DNS, regras de NAT e abertura de portas para garantir disponibilidade e roteamento seguro das aplicações",
+                "Automatizei rotinas de backup para mais de 30 sistemas Linux e ambientes Docker, aumentando a segurança e reduzindo riscos de perda em caso de falhas"
             ]
         },
-        {
-            enterprise: "PANIFICADORA JR",
-            date: "Janeiro 2023 - Dezembro 2024",
-            role: "Atendente",
-            worktype: "Presencial",
-            description: [
-                "Atendi 50+ clientes/dia mantendo 95% de satisfação através de agilidade, organização e comunicação eficaz em ambiente de alta demanda",
-                "Desenvolvi soft skills essenciais para ambientes tech: comunicação clara, trabalho sob pressão, resolução rápida de problemas e foco no cliente"
-            ]
-        }
+        // {
+        //     enterprise: "PANIFICADORA JR",
+        //     date: "Janeiro 2023 - Dezembro 2024",
+        //     role: "Atendente",
+        //     worktype: "Presencial",
+        //     description: [
+        //         "Atendi 50+ clientes/dia mantendo 95% de satisfação através de agilidade, organização e comunicação eficaz em ambiente de alta demanda",
+        //         "Desenvolvi soft skills essenciais para ambientes tech: comunicação clara, trabalho sob pressão, resolução rápida de problemas e foco no cliente"
+        //     ]
+        // }
     ],
 
     Academics: [
@@ -129,7 +129,7 @@ export const NADSON: ProfileData = {
             school: "Rocketseat",
             date: "2025 • 380 Horas",
             description:
-                "Formação intensiva em desenvolvimento moderno: Node.js, Fastify, NestJS, TypeScript, PostgreSQL, Prisma, Knex.js, React, Next.js, TailwindCSS. Projetos práticos aplicando SOLID, Clean Architecture, testes automatizados e deploy em produção."
+                "Formação Fullstack (380h) com foco em Node.js, React, TypeScript, PostgreSQL, Fastify, testes automatizados e Clean Architecture."
         },
 
         {
@@ -144,7 +144,7 @@ export const NADSON: ProfileData = {
     TechStack: {
         data: [
             "Backend: Node.js, Fastify, NestJS, TypeScript, Express, Prisma ORM, Knex.js, PostgreSQL, MySQL, SQLite, Redis",
-            "Frontend: React, Next.js 14, Vite, TypeScript, TailwindCSS, Shadcn UI, React Hook Form, Zod, Radix UI, Framer Motion",
+            "Frontend: React, Next.js 16, Vite, TypeScript, React Query, Zustand, TailwindCSS, Shadcn UI, React Hook Form, Zod",
             "DevOps & Infra: Docker, Docker Compose, Linux (Ubuntu, CentOS), Nginx, CI/CD, Git, GitHub Actions",
             "Testing & Tools: Vitest, Jest, Axios, Python (Pandas, Typer), REST APIs, WebSockets, Postman, VS Code"
         ]
@@ -250,6 +250,73 @@ export const ANAJULIA: ProfileData = {
             "- Educação em Saúde",
             "- Organização e Trabalho em Equipe",
             "- Inglês Instrumental (leitura científica)"
+        ]
+    }
+}
+
+export const JOAOLUIZ: ProfileData = {
+    Header: {
+        Name: "JOÃO LUIZ PEREIRA FILHO",
+        Subtitle: "Estudante de Ciência da Computação | Atendimento ao Cliente e Suporte Operacional",
+        Links: [
+            { icon: Phone, text: "(81) 98975-3341", url: "tel:+5581989753341", link: true },
+            { icon: Mail, text: "joaoluizwork1@gmail.com", url: "mailto:joaoluizwork1@gmail.com", link: true },
+            { icon: Globe, text: "Caruaru - PE", url: "", link: true },
+        ]
+    },
+    AboutMe:
+        "Estudante de Bacharelado em Ciência da Computação na UNIFAVIP Wyden (5º período), com dois anos de experiência em atendimento ao público, vendas e suporte operacional. Tenho facilidade para lidar com clientes, boa comunicação, organização e trabalho em equipe. Possuo inglês intermediário certificado pela KNN Idiomas. Busco uma oportunidade onde eu possa crescer profissionalmente e contribuir com dedicação, responsabilidade e comprometimento.",
+    Experiences: [
+        {
+            enterprise: "Experiência em Atendimento ao Público",
+            date: "2024 - 2025",
+            role: "Atendente e Suporte Operacional",
+            worktype: "Presencial",
+            description: [
+                "- Realizei atendimento direto ao cliente, garantindo agilidade, cordialidade e uma experiência positiva no ponto de venda",
+                "- Organizei e repus produtos nas prateleiras, mantendo o ambiente apresentável e facilitando a localização pelos clientes",
+                "- Controlei e organizei o estoque, assegurando a disponibilidade de produtos e reduzindo perdas",
+                "- Ofereci suporte geral às atividades do ambiente de trabalho, demonstrando proatividade e comprometimento"
+            ]
+        }
+    ],
+    Academics: [
+        {
+            title: "Bacharelado em Ciência da Computação",
+            school: "UNIFAVIP WYDEN",
+            date: "5º período (cursando)",
+            description: "Formação em andamento com foco em Algoritmos, Estrutura de Dados, Programação e Fundamentos da Computação."
+        },
+        {
+            title: "Ensino Médio Completo",
+            school: "Ensino Médio",
+            date: "Concluído",
+        }
+    ],
+    Certifications: [
+        {
+            title: "Inglês Intermediário",
+            institution: "KNN Idiomas",
+            date: "Certificado",
+            description: "Certificação de proficiência em inglês intermediário, com domínio de conversação, leitura e escrita no nível."
+        },
+        {
+            title: "Pacote Office",
+            institution: "Microsoft Office",
+            date: "Word, Excel e PowerPoint",
+            description: "Domínio das ferramentas do Pacote Office para elaboração de documentos, planilhas e apresentações."
+        }
+    ],
+    Competences: {
+        data: [
+            "- Boa comunicação",
+            "- Organização e responsabilidade",
+            "- Facilidade para trabalhar em equipe",
+            "- Agilidade para aprender novas funções",
+            "- Atendimento ao público e vendas",
+            "- Controle e organização de estoque",
+            "- Inglês Intermediário (KNN Idiomas)",
+            "- Pacote Office (Word, Excel e PowerPoint)"
         ]
     }
 }

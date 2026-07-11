@@ -3,7 +3,7 @@ import type { IHeaderProps, ILinkProps } from "@/typings"
 export function Header({ content }: { content: IHeaderProps }) {
 
     return (
-        <header className="flex flex-col items-center leading-8 my-2">
+        <header className="flex flex-col items-center leading-9 my-2">
             <h1 className="text-[40px]">{content.Name}</h1>
 
             {content.Subtitle && (
