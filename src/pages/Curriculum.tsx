@@ -4,21 +4,27 @@ import { WorkExperience } from "@/components/WorkExperience"
 import { Academic } from "@/components/Academic"
 import { Projects } from "@/components/Projects"
 import { TechStack } from "@/components/TechStack"
-import { NADSON } from "@/data"
+import { getProfileBySlug } from "@/data"
 import { Certifications } from "@/components/Certifications"
 import { Competences } from "@/components/Competences"
-
-const {
-    Header: headerContent,
-    AboutMe: aboutContent,
-    Experiences: workExperienceContent,
-    Academics: academicsContent,
-    Certifications: certificationsContent,
-    Competences: CompetencesContent,
-    TechStack: techStackContent
-} = NADSON
+import { Navigate, useParams } from "react-router-dom"
 
 export function Curriculum() {
+    const { slug } = useParams<{ slug: string }>()
+    const profile = getProfileBySlug(slug)
+
+    if (!profile) return <Navigate to="/" replace />
+
+    const {
+        Header: headerContent,
+        AboutMe: aboutContent,
+        Experiences: workExperienceContent,
+        Academics: academicsContent,
+        Certifications: certificationsContent,
+        Competences: CompetencesContent,
+        TechStack: techStackContent
+    } = profile
+
     const projectContent = false
 
     return (

@@ -42,3 +42,14 @@ export type IHeaderProps = {
     Subtitle?: string
     Links: ILinkProps[]
 }
+
+export type ProfileData = {
+    slug: string
+    Header: IHeaderProps
+    AboutMe?: string
+    Experiences?: IExperienceProps[]
+    Academics?: IAcademicProps[]
+    Certifications?: ICertificationsProps[]
+    Competences?: ICompetencesProps
+    TechStack?: ITechStackProps
+}

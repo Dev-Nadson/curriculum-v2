@@ -1,18 +1,8 @@
 import { Github, Globe, Linkedin, Mail, Phone } from "lucide-react";
-import type { IAcademicProps, ICertificationsProps, ICompetencesProps, IExperienceProps, ITechStackProps } from "../typings";
-import type { IHeaderProps } from "../typings";
-
-interface ProfileData {
-    Header: IHeaderProps
-    AboutMe?: string
-    Experiences?: IExperienceProps[]
-    Academics?: IAcademicProps[]
-    Certifications?: ICertificationsProps[]
-    Competences?: ICompetencesProps
-    TechStack?: ITechStackProps
-}
+import type { ProfileData } from "../typings";
 
 export const PEDRO: ProfileData = {
+    slug: "pedro",
     Header: {
         Name: "PEDRO HENRIQUE DE O. DA SILVA",
         Links: [
@@ -64,6 +54,7 @@ export const PEDRO: ProfileData = {
 }
 
 export const NADSON: ProfileData = {
+    slug: "nadson",
     Header: {
         Name: "NADSON ALEX DA SILVA",
         Subtitle: "Desenvolvedor Fullstack | Especialista em Node.js, React e TypeScript",
@@ -152,6 +143,7 @@ export const NADSON: ProfileData = {
 }
 
 export const ANAJULIA: ProfileData = {
+    slug: "ana-julia",
     Header: {
         Name: "ANA JÚLIA ALVES DA SILVA",
         Subtitle: "Acadêmica em Farmácia e Atendimento ao Público",
@@ -254,69 +246,8 @@ export const ANAJULIA: ProfileData = {
     }
 }
 
-export const JOAOLUIZ: ProfileData = {
-    Header: {
-        Name: "JOÃO LUIZ PEREIRA FILHO",
-        Subtitle: "Estudante de Ciência da Computação | Atendimento ao Cliente e Suporte Operacional",
-        Links: [
-            { icon: Phone, text: "(81) 98975-3341", url: "tel:+5581989753341", link: true },
-            { icon: Mail, text: "joaoluizwork1@gmail.com", url: "mailto:joaoluizwork1@gmail.com", link: true },
-            { icon: Globe, text: "Caruaru - PE", url: "", link: true },
-        ]
-    },
-    AboutMe:
-        "Estudante de Bacharelado em Ciência da Computação na UNIFAVIP Wyden (5º período), com dois anos de experiência em atendimento ao público, vendas e suporte operacional. Tenho facilidade para lidar com clientes, boa comunicação, organização e trabalho em equipe. Possuo inglês intermediário certificado pela KNN Idiomas. Busco uma oportunidade onde eu possa crescer profissionalmente e contribuir com dedicação, responsabilidade e comprometimento.",
-    Experiences: [
-        {
-            enterprise: "Experiência em Atendimento ao Público",
-            date: "2024 - 2025",
-            role: "Atendente e Suporte Operacional",
-            worktype: "Presencial",
-            description: [
-                "- Realizei atendimento direto ao cliente, garantindo agilidade, cordialidade e uma experiência positiva no ponto de venda",
-                "- Organizei e repus produtos nas prateleiras, mantendo o ambiente apresentável e facilitando a localização pelos clientes",
-                "- Controlei e organizei o estoque, assegurando a disponibilidade de produtos e reduzindo perdas",
-                "- Ofereci suporte geral às atividades do ambiente de trabalho, demonstrando proatividade e comprometimento"
-            ]
-        }
-    ],
-    Academics: [
-        {
-            title: "Bacharelado em Ciência da Computação",
-            school: "UNIFAVIP WYDEN",
-            date: "5º período (cursando)",
-            description: "Formação em andamento com foco em Algoritmos, Estrutura de Dados, Programação e Fundamentos da Computação."
-        },
-        {
-            title: "Ensino Médio Completo",
-            school: "Ensino Médio",
-            date: "Concluído",
-        }
-    ],
-    Certifications: [
-        {
-            title: "Inglês Intermediário",
-            institution: "KNN Idiomas",
-            date: "Certificado",
-            description: "Certificação de proficiência em inglês intermediário, com domínio de conversação, leitura e escrita no nível."
-        },
-        {
-            title: "Pacote Office",
-            institution: "Microsoft Office",
-            date: "Word, Excel e PowerPoint",
-            description: "Domínio das ferramentas do Pacote Office para elaboração de documentos, planilhas e apresentações."
-        }
-    ],
-    Competences: {
-        data: [
-            "- Boa comunicação",
-            "- Organização e responsabilidade",
-            "- Facilidade para trabalhar em equipe",
-            "- Agilidade para aprender novas funções",
-            "- Atendimento ao público e vendas",
-            "- Controle e organização de estoque",
-            "- Inglês Intermediário (KNN Idiomas)",
-            "- Pacote Office (Word, Excel e PowerPoint)"
-        ]
-    }
+export const PROFILES: ProfileData[] = [NADSON, PEDRO, ANAJULIA]
+
+export function getProfileBySlug(slug?: string) {
+    return PROFILES.find((profile) => profile.slug === slug)
 }
