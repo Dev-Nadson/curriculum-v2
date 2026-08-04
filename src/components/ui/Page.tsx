@@ -12,9 +12,10 @@ export function PageContainer({ children, ...props }: React.ComponentProps<'div'
 }
 
 export function CurriculumContainer({ children, ...props }: React.ComponentProps<'div'>) {
+    // Sem h-screen: unidade de viewport torna a paginação do PDF imprevisível.
     return (
-        <div {...props} className='w-185 h-screen'>
-            <div className='flex flex-col gap-2 mb-4'>
+        <div {...props} className='w-185 print:w-full'>
+            <div className='flex flex-col gap-1.5 mb-4 print:mb-0 text-[13px]'>
                 {children}
                 <Outlet />
             </div>
@@ -24,7 +25,7 @@ export function CurriculumContainer({ children, ...props }: React.ComponentProps
 
 export function SessionContainer({ children, className }: React.ComponentProps<'div'>) {
     return (
-        <section className={cn("flex flex-col gap-2 w-full", className)}>
+        <section className={cn("flex flex-col gap-1 w-full", className)}>
             {children}
         </section>
     )
@@ -37,8 +38,8 @@ interface ISeparatorProps {
 export function Separator({ title }: ISeparatorProps) {
     return (
         <div className="w-full">
-            {title && <h3>{title}</h3>}
-            <div className="rounded-full border border-stone-300"></div>
+            {title && <h3 className="text-[14px] font-bold uppercase tracking-wide leading-tight">{title}</h3>}
+            <div className="rounded-full border-t border-stone-400"></div>
         </div>
     )
 }

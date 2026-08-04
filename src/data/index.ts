@@ -1,56 +1,188 @@
 import { Github, Globe, Linkedin, Mail, Phone } from "lucide-react";
-import type { ProfileData } from "../typings";
+import type {
+    IAcademicProps,
+    ICertificationsProps,
+    ICompetencesProps,
+    ILinkProps,
+    ProfileData
+} from "@/typings";
 
-export const PEDRO: ProfileData = {
-    slug: "pedro",
+
+const PEDRO_LINKS: ILinkProps[] = [
+    { icon: Phone, text: "(81) 98978-5231", url: "tel:+5581989785231" },
+    { icon: Mail, text: "pedrohenrique20059980@gmail.com", url: "mailto:pedrohenrique20059980@gmail.com" },
+    { icon: Linkedin, text: "in/pedro-henrique-7427b4261", url: "https://www.linkedin.com/in/pedro-henrique-7427b4261" },
+    { icon: Github, text: "github.com/PedroHenriqueOSilva", url: "https://github.com/PedroHenriqueOSilva" },
+]
+
+const PEDRO_CERTIFICATIONS: ICertificationsProps[] = [
+    {
+        title: "Formação em Programação de Software (JavaScript, HTML, CSS)",
+        institution: "UNICESUMAR",
+        date: "2022 • 440 horas"
+    },
+    {
+        title: "Python e Algoritmos (Lógica de Programação e POO)",
+        institution: "Curso em Vídeo",
+        date: "2024 • 80 horas" // CONFIRMAR: ano de conclusão
+    }
+]
+
+const PEDRO_ENSINO_MEDIO: IAcademicProps = {
+    title: "Ensino Médio Completo",
+    school: "SESI - José Ranulfo da Costa Queiroz",
+    date: "Dezembro 2022"
+}
+
+const PEDRO_LANGUAGES: ICompetencesProps = {
+    data: ["Português: Nativo  •  Inglês: Leitura técnica de documentação (intermediário em leitura, básico em conversação)"]
+}
+
+export const PEDRO_SUPORTE: ProfileData = {
+    slug: "pedro-suporte",
+    Order: ["AboutMe", "Experiences", "Competences", "Academics", "Certifications", "Projects", "Languages"],
     Header: {
         Name: "PEDRO HENRIQUE DE O. DA SILVA",
-        Links: [
-            { icon: Phone, text: "(81) 989785231", url: "", link: true },
-            { icon: Mail, text: "pedrohenrique20059980@gmail.com", url: "mailto:pedrohenrique20059980@gmail.com", link: true },
-            { icon: Linkedin, text: "PedroHenriqueOSilva", url: "https://github.com/PedroHenriqueOSilva", link: true },
-            { icon: Github, text: "Pedro Henrique", url: "https://www.linkedin.com/in/pedro-henrique-7427b4261", link: true }
-        ]
+        Subtitle: "Analista de Suporte Técnico | Infraestrutura de TI, Redes e Service Desk",
+        Links: PEDRO_LINKS
     },
-    AboutMe: "Possuo com três anos de experiência em suporte técnico e atendimento ao usuário, atuando com manutenção de hardware, diagnóstico de sistemas e substituição de componentes. Em transição de carreira para a área de Desenvolvimento Web, com foco no aprendizado e aplicação de Python na resolução de problemas e no desenvolvimento de soluções. Perfil proativo, organizado e com facilidade para trabalho em equipe.",
+    AboutMe: "Profissional de TI com 3 anos de experiência em suporte técnico e infraestrutura, atuando com Service Desk (N1 e N2), administração de sistema ERP, manutenção de hardware e estruturação de redes corporativas. Atendo aproximadamente 20 usuários e mantenho mais de 30 estações de trabalho, com foco em disponibilidade e padronização do parque tecnológico. Graduando em Ciência da Computação pela UNIFAVIP Wyden.",
     Experiences: [
         {
             enterprise: "MASTERDRIVE IMPORTAÇÃO",
+            role: "Suporte Técnico em TI / Auxiliar Administrativo",
             date: "Janeiro 2023 - Atual",
-            role: "Auxiliar Administrativo - Suporte em TI",
             worktype: "Presencial",
             description: [
-                "- Gerenciei o sistema ERP da empresa, prestando suporte técnico, realizando configurações e treinando aproximadamente 20 usuários, garantindo a utilização eficiente, contínua e padronizada da plataforma.",
-                "- Executei a montagem, manutenção e reparo de mais de 30 máquinas, além da estruturação, cabeamento e organização da rede corporativa, assegurando estabilidade, desempenho e padronização da infraestrutura de TI.",
-                "- Liderei o setor de helpdesk, oferecendo suporte direto aos colaboradores em demandas de hardware, software e conectividade, reduzindo falhas operacionais e garantindo o pleno funcionamento dos recursos tecnológicos da empresa.",
+                "Administrei o sistema ERP da empresa, executando configurações e parametrizações e treinando aproximadamente 20 usuários, o que padronizou processos e reduziu retrabalho nas rotinas administrativas.",
+                "Atuei como responsável pelo Service Desk (N1 e N2), registrando e tratando chamados de hardware, software e conectividade com atendimento presencial e remoto a todos os setores.",
+                "Realizei montagem e manutenção preventiva e corretiva de mais de 30 estações de trabalho: diagnóstico de falhas, substituição de componentes (SSD, memória e fonte), formatação e instalação de Windows.",
+                "Estruturei a rede corporativa com cabeamento estruturado, crimpagem e organização de rack, configurando roteadores, switches e parâmetros de TCP/IP, DHCP e DNS.",
+                "Documentei procedimentos de suporte e rotinas de backup do ERP, reduzindo o tempo de atendimento de chamados recorrentes e o risco de perda de dados."
+            ]
+        }
+    ],
+    Competences: {
+        data: [
+            "Suporte e Service Desk: Atendimento N1 e N2, tratativa de chamados, suporte presencial e remoto, treinamento de usuários, documentação de procedimentos",
+            "Sistemas Operacionais: Windows 10 e 11, instalação, formatação e drivers; Linux (Ubuntu) e linha de comando",
+            "Hardware e Redes: Manutenção de desktops e notebooks, troca de componentes, impressoras e periféricos; cabeamento estruturado (Cat5e/Cat6), TCP/IP, DHCP, DNS, roteadores, switches e Wi-Fi",
+            "Sistemas e Ferramentas: ERP, Pacote Office, Google Workspace, acesso remoto (AnyDesk, TeamViewer), Git e GitHub",
+            "Programação e Automação: Python (lógica e POO), SQL básico, JavaScript, HTML, CSS"
+        ]
+    },
+    Academics: [
+        {
+            title: "Bacharelado em Ciência da Computação",
+            school: "UNIFAVIP WYDEN",
+            date: "Fevereiro 2025 - Dezembro 2029", // CONFIRMAR: previsão de conclusão
+            description: "Ênfase em Redes de Computadores, Arquitetura de Computadores, Estrutura de Dados, Programação em C e Computação em Nuvem."
+        },
+        PEDRO_ENSINO_MEDIO
+    ],
+    Certifications: PEDRO_CERTIFICATIONS,
+    Projects: [
+        {
+            title: "Sistema de Inventário de TI",
+            stack: "Python, SQLite, POO",
+            date: "2025",
+            url: "", // TODO: publicar no GitHub e colar a URL do repositório aqui
+            description: "Aplicação de linha de comando para cadastro e consulta de equipamentos de TI, com persistência em SQLite, relatórios por setor e histórico de manutenções."
+        }
+    ],
+    Languages: PEDRO_LANGUAGES
+}
+
+export const PEDRO_DEV: ProfileData = {
+    slug: "pedro-dev",
+    // Transição de carreira: stack e projetos vêm antes da experiência, porque é
+    // o que o recrutador técnico procura primeiro.
+    Order: ["AboutMe", "TechStack", "Projects", "Experiences", "Academics", "Certifications", "Languages"],
+    Header: {
+        Name: "PEDRO HENRIQUE DE O. DA SILVA",
+        // Cargo alvo, sem "buscando oportunidade" — o objetivo vai no resumo.
+        Subtitle: "Desenvolvedor Júnior | Python, JavaScript e SQL",
+        Links: PEDRO_LINKS
+    },
+    AboutMe: "Graduando em Ciência da Computação pela UNIFAVIP Wyden, em transição para desenvolvimento de software, com base em Python (algoritmos e Programação Orientada a Objetos), JavaScript, HTML, CSS, SQL e versionamento com Git e GitHub. Trago 3 anos de experiência em TI dando suporte a sistema ERP, diagnosticando falhas e atendendo usuários de diferentes setores — vivência que consolidou raciocínio lógico, investigação de causa raiz e comunicação com áreas de negócio. Busco oportunidade como Desenvolvedor Júnior ou estagiário em desenvolvimento.",
+    TechStack: {
+        data: [
+            "Linguagens: Python, JavaScript, C, SQL, HTML5, CSS3",
+            "Python: Programação Orientada a Objetos, estruturas de dados, manipulação de arquivos, tratamento de exceções, scripts de automação",
+            "Banco de Dados: SQL (SELECT, JOIN e agregações), modelagem relacional, SQLite, MySQL",
+            "Ferramentas: Git, GitHub, VS Code, terminal Linux",
+            "Fundamentos: Algoritmos e Estrutura de Dados, POO, Redes de Computadores, Arquitetura de Computadores, Computação em Nuvem",
+            // CONFIRMAR: manter somente o que ele estiver estudando de fato.
+            "Em aprendizado: APIs REST, Flask e FastAPI, Docker, testes automatizados"
+        ]
+    },
+    /*
+     * SEÇÃO CRÍTICA DESTE CURRÍCULO.
+     *
+     * Sem projetos publicados, um currículo de dev júnior sem experiência em
+     * código não passa da triagem técnica. As três entradas abaixo estão escritas
+     * mas ainda SEM repositório — precisam existir no GitHub com README.
+     *
+     * Ordem de prioridade: o projeto 1 é o mais forte, porque nasce da rotina
+     * real do Pedro (controle de parque de TI) e demonstra POO + banco de dados
+     * — além de render uma boa história em entrevista.
+     *
+     * TODO (Pedro): construir, publicar e preencher cada `url`. Remover as
+     * entradas que não forem publicadas — projeto listado sem link levanta
+     * suspeita, e é pior do que seção menor.
+     */
+    Projects: [
+        {
+            title: "Sistema de Inventário de TI",
+            stack: "Python, SQLite, POO",
+            date: "2025",
+            url: "", // TODO
+            description: "Aplicação de linha de comando para cadastro e consulta de equipamentos de TI, com persistência em SQLite, relatórios por setor e histórico de manutenções. Modelada com classes e separação entre regras de negócio e acesso a dados."
+        },
+        {
+            title: "Analisador de Chamados de Suporte",
+            stack: "Python, Pandas, CSV",
+            date: "2025",
+            url: "", // TODO
+            description: "Script que processa uma base de chamados em CSV e gera métricas de volume por categoria, tempo médio de atendimento e ranking de problemas recorrentes."
+        },
+        {
+            title: "Portfólio Pessoal",
+            stack: "HTML5, CSS3, JavaScript, GitHub Pages",
+            date: "2025",
+            url: "", // TODO
+            description: "Página responsiva reunindo projetos e formação, com layout adaptado para desktop e mobile e publicação contínua via GitHub Pages."
+        }
+    ],
+    Experiences: [
+        {
+            enterprise: "MASTERDRIVE IMPORTAÇÃO",
+            role: "Suporte Técnico em TI / Auxiliar Administrativo",
+            date: "Janeiro 2023 - Atual",
+            worktype: "Presencial",
+            // Mesmas atividades do currículo de suporte, reanguladas para o valor
+            // que uma vaga de desenvolvimento reconhece.
+            description: [
+                "Prestei suporte e configuração do sistema ERP da empresa, levantando necessidades junto a usuários de diferentes setores e traduzindo demandas de negócio em ajustes e parametrizações do sistema.",
+                "Diagnostiquei e resolvi falhas de sistema, rede e hardware para aproximadamente 20 usuários, aplicando leitura de logs, interpretação de mensagens de erro e investigação de causa raiz.",
+                "Treinei aproximadamente 20 usuários no uso do ERP e documentei procedimentos operacionais, reduzindo a recorrência de chamados.",
+                // CONFIRMAR: incluir SOMENTE se for verdade. Se ainda não fez, é a
+                // automação mais fácil de começar — e vale mais que qualquer curso.
+                "Automatizei tarefas repetitivas de rotina com scripts em Python, reduzindo o tempo de execução manual dessas atividades."
             ]
         }
     ],
     Academics: [
         {
-            title: "Bacharelado em Ciências da Computação",
+            title: "Bacharelado em Ciência da Computação",
             school: "UNIFAVIP WYDEN",
-            date: "Fev 2025 - Atual",
-            description: "Redes de Computadores, Arquitetura de Computadores, Programação de Software em C, Estrutura de Dados, Computação em Nuvem, Git, Github"
+            date: "Fevereiro 2025 - Dezembro 2029", // CONFIRMAR: previsão de conclusão
+            description: "Ênfase em Algoritmos e Estrutura de Dados, Programação em C, Arquitetura de Computadores, Redes de Computadores e Computação em Nuvem."
         },
-        {
-            title: "Programação de Software",
-            school: "UNICESUMAR",
-            date: "440 Horas - 2022",
-            description: "JavaScript, HTML, CSS"
-        },
-        {
-            title: "Python e Algortimos",
-            school: "Curso em Vídeo",
-            date: "80 Horas",
-            description: "Lógica de Programação, Programação Orientada a Objeto"
-        },
-        {
-            title: "Ensino Médio",
-            school: "SESI - JOSÉ RANULFO DA COSTA QUEIROZ",
-            date: "Fev 2025 - Atual",
-        }
-    ]
+        PEDRO_ENSINO_MEDIO
+    ],
+    Certifications: PEDRO_CERTIFICATIONS,
+    Languages: PEDRO_LANGUAGES
 }
 
 export const NADSON: ProfileData = {
@@ -59,10 +191,10 @@ export const NADSON: ProfileData = {
         Name: "NADSON ALEX DA SILVA",
         Subtitle: "Desenvolvedor Fullstack | Especialista em Node.js, React e TypeScript",
         Links: [
-            { icon: Phone, text: "(81) 98978-5231", url: "tel:+5581989785231", link: true },
-            { icon: Mail, text: "nadson.pros@gmail.com", url: "mailto:nadson.pros@gmail.com", link: true },
-            { icon: Linkedin, text: "linkedin.com/in/nadson-alex", url: "https://linkedin.com/in/nadson-alex", link: true },
-            { icon: Github, text: "github.com/Dev-Nadson", url: "https://github.com/Dev-Nadson", link: true },
+            { icon: Phone, text: "(81) 98978-5231", url: "tel:+5581989785231" },
+            { icon: Mail, text: "nadson.pros@gmail.com", url: "mailto:nadson.pros@gmail.com" },
+            { icon: Linkedin, text: "linkedin.com/in/nadson-alex", url: "https://linkedin.com/in/nadson-alex" },
+            { icon: Github, text: "github.com/Dev-Nadson", url: "https://github.com/Dev-Nadson" },
         ]
     },
     AboutMe: "Desenvolvedor Fullstack com foco em backend, especializado em Node.js, Fastify, TypeScript e PostgreSQL. Experiência no desenvolvimento de APIs REST multi-tenant, otimização de consultas SQL, estratégias de cache com Redis e aplicações React modernas. Graduando em Ciência da Computação (PROUNI integral).",
@@ -148,10 +280,10 @@ export const ANAJULIA: ProfileData = {
         Name: "ANA JÚLIA ALVES DA SILVA",
         Subtitle: "Acadêmica em Farmácia e Atendimento ao Público",
         Links: [
-            { icon: Phone, text: "(81) 99745-8420", url: "", link: true },
-            { icon: Mail, text: "anajuliaalvesdasilva00@gmail.com", url: "mailto:anajuliaalvesdasilva00@gmail.com", link: true },
-            { icon: Linkedin, text: "linkedin.com/in/farm-ana-julia", url: "https://www.linkedin.com/in/farm-ana-julia", link: true },
-            { icon: Globe, text: "Currículo Lattes", url: "https://lattes.cnpq.br/9584098191647265", link: true },
+            { icon: Phone, text: "(81) 99745-8420", url: "" },
+            { icon: Mail, text: "anajuliaalvesdasilva00@gmail.com", url: "mailto:anajuliaalvesdasilva00@gmail.com" },
+            { icon: Linkedin, text: "linkedin.com/in/farm-ana-julia", url: "https://www.linkedin.com/in/farm-ana-julia" },
+            { icon: Globe, text: "Currículo Lattes", url: "https://lattes.cnpq.br/9584098191647265" },
         ]
     },
     AboutMe:
@@ -163,10 +295,10 @@ export const ANAJULIA: ProfileData = {
             role: "Promotora de Eventos",
             worktype: "Presencial",
             description: [
-                "- Promovi estabelecimentos por meio da distribuição de mais de 800 panfletos diários, utilizando abordagem simpática e comunicação eficiente com o público",
-                "- Realizei ações de degustação para promoção de produtos, atendendo mais de 80 pessoas diariamente e aumentando o interesse dos consumidores",
-                "- Participei de ações práticas como estudante de Farmácia, incluindo limpeza de pele, aferição de pressão arterial e orientações básicas em saúde",
-                "- Ofereci atendimento humanizado ao público, buscando orientar e proporcionar uma experiência positiva aos participantes das ações"
+                "Promovi estabelecimentos por meio da distribuição de mais de 800 panfletos diários, utilizando abordagem simpática e comunicação eficiente com o público",
+                "Realizei ações de degustação para promoção de produtos, atendendo mais de 80 pessoas diariamente e aumentando o interesse dos consumidores",
+                "Participei de ações práticas como estudante de Farmácia, incluindo limpeza de pele, aferição de pressão arterial e orientações básicas em saúde",
+                "Ofereci atendimento humanizado ao público, buscando orientar e proporcionar uma experiência positiva aos participantes das ações"
             ]
         },
         {
@@ -175,10 +307,10 @@ export const ANAJULIA: ProfileData = {
             role: "Auxiliar de Professor",
             worktype: "Presencial",
             description: [
-                "- Acompanhei turmas da alfabetização infantil ao ensino médio, com foco em Matemática, Física e Química, oferecendo suporte personalizado aos alunos",
-                "- Identifiquei dificuldades específicas de aprendizagem e adaptei explicações para melhorar engajamento e compreensão dos estudantes",
-                "- Mantive comunicação constante com pais e professores, contribuindo para maior alinhamento pedagógico e evolução acadêmica",
-                "- Auxiliei na organização das demandas do cursinho preparatório, colaborando para aumento da procura pelo curso"
+                "Acompanhei turmas da alfabetização infantil ao ensino médio, com foco em Matemática, Física e Química, oferecendo suporte personalizado aos alunos",
+                "Identifiquei dificuldades específicas de aprendizagem e adaptei explicações para melhorar engajamento e compreensão dos estudantes",
+                "Mantive comunicação constante com pais e professores, contribuindo para maior alinhamento pedagógico e evolução acadêmica",
+                "Auxiliei na organização das demandas do cursinho preparatório, colaborando para aumento da procura pelo curso"
             ]
         },
         {
@@ -187,10 +319,10 @@ export const ANAJULIA: ProfileData = {
             role: "Balconista e Operadora de Caixa",
             worktype: "Presencial",
             description: [
-                "- Realizei atendimento direto ao público, garantindo agilidade, organização e atenção durante o serviço",
-                "- Atuei em operações de caixa, preparo de pedidos e controle básico de estoque seguindo procedimentos organizacionais",
-                "- Fui responsável pela abertura e fechamento do estabelecimento, assegurando o funcionamento diário da unidade",
-                "- Desenvolvi habilidades de comunicação, resolução de problemas e trabalho sob pressão em ambiente de alta demanda"
+                "Realizei atendimento direto ao público, garantindo agilidade, organização e atenção durante o serviço",
+                "Atuei em operações de caixa, preparo de pedidos e controle básico de estoque seguindo procedimentos organizacionais",
+                "Fui responsável pela abertura e fechamento do estabelecimento, assegurando o funcionamento diário da unidade",
+                "Desenvolvi habilidades de comunicação, resolução de problemas e trabalho sob pressão em ambiente de alta demanda"
             ]
         }
     ],
@@ -246,7 +378,7 @@ export const ANAJULIA: ProfileData = {
     }
 }
 
-export const PROFILES: ProfileData[] = [NADSON, PEDRO, ANAJULIA]
+export const PROFILES: ProfileData[] = [NADSON, PEDRO_SUPORTE, PEDRO_DEV, ANAJULIA]
 
 export function getProfileBySlug(slug?: string) {
     return PROFILES.find((profile) => profile.slug === slug)

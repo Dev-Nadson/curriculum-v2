@@ -4,7 +4,6 @@ export type ILinkProps = {
     icon: LucideIcon
     text: string
     url: string
-    link?: boolean
 }
 
 export type IExperienceProps = {
@@ -29,6 +28,14 @@ export type ICertificationsProps = {
     title: string
 }
 
+export type IProjectProps = {
+    description: string
+    stack?: string
+    url?: string
+    date?: string
+    title: string
+}
+
 export type ICompetencesProps = {
     data: string[]
 }
@@ -43,6 +50,16 @@ export type IHeaderProps = {
     Links: ILinkProps[]
 }
 
+export type SectionName =
+    | "AboutMe"
+    | "Experiences"
+    | "Academics"
+    | "Certifications"
+    | "Projects"
+    | "Competences"
+    | "TechStack"
+    | "Languages"
+
 export type ProfileData = {
     slug: string
     Header: IHeaderProps
@@ -50,6 +67,10 @@ export type ProfileData = {
     Experiences?: IExperienceProps[]
     Academics?: IAcademicProps[]
     Certifications?: ICertificationsProps[]
+    Projects?: IProjectProps[]
     Competences?: ICompetencesProps
     TechStack?: ITechStackProps
+    Languages?: ICompetencesProps
+    /** Ordem das seções no currículo. Ausente = ordem padrão de DEFAULT_ORDER. */
+    Order?: SectionName[]
 }

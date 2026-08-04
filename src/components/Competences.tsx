@@ -1,17 +1,22 @@
 import type { ICompetencesProps } from "@/typings";
-import { Separator } from "./ui/Page";
+import { Separator, SessionContainer } from "./ui/Page";
 
-export function Competences({ content }: { content: ICompetencesProps }) {
+interface ICompetencesComponentProps {
+    content: ICompetencesProps
+    title?: string
+}
+
+export function Competences({ content, title = "Competências Técnicas" }: ICompetencesComponentProps) {
     return (
-        <div className="flex flex-col gap-2 w-full">
-            <Separator title="Competências" />
-            <section className="flex flex-col leading-5">
-                {content.data.map((tech, index) => (
+        <SessionContainer>
+            <Separator title={title} />
+            <section className="flex flex-col leading-snug">
+                {content.data.map((item, index) => (
                     <p key={index} className="text-justify">
-                        {tech}
+                        {item}
                     </p>
                 ))}
             </section>
-        </div>
+        </SessionContainer>
     )
 }

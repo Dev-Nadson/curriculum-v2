@@ -4,7 +4,7 @@ export function AboutMe({ content }: { content: string }) {
     return (
         <SessionContainer>
             <Separator title="Sobre" />
-            <p className="text-justify pl-3 leading-5">
+            <p className="text-justify leading-snug">
                 {content}
             </p>
         </SessionContainer >

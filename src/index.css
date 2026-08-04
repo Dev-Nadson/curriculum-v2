@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+/*
+ * O currículo é impresso via Ctrl+P → PDF (é esse PDF que o ATS lê).
+ * A4 tem 210mm de largura; com 6mm de margem lateral sobram ~198mm (~748px),
+ * o que acomoda a largura de tela do currículo (w-185 = 740px) sem o Chrome
+ * reduzir a escala.
+ */
+@media print {
+    @page {
+        size: A4;
+        margin: 8mm 6mm;
+    }
+
+    /* Evita quebrar um cargo, formação ou projeto no meio ao virar a página. */
+    article,
+    section {
+        break-inside: avoid;
+    }
+}
