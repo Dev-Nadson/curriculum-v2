@@ -185,93 +185,216 @@ export const PEDRO_DEV: ProfileData = {
     Languages: PEDRO_LANGUAGES
 }
 
+/*
+ * =============================================================================
+ * NADSON ALEX — três versões do mesmo histórico profissional.
+ *
+ * NADSON           (/curriculo/nadson)           panorama fullstack
+ * NADSON_BACKEND   (/curriculo/nadson-backend)   vagas de Backend / Node.js
+ * NADSON_FRONTEND  (/curriculo/nadson-frontend)  vagas de Frontend / React
+ *
+ * Mesmas atividades reais em todas: o que muda é a ordem, o recorte e o peso
+ * dado a cada uma. Nada de experiência inventada entre as versões.
+ *
+ * As duas vagas foram na CATSUC LABS — Suporte em TI e depois Desenvolvedor.
+ * Isso é uma promoção interna e aparece como duas entradas sob a mesma empresa:
+ * é o formato mais seguro para ATS (o parser vincula os dois cargos ao mesmo
+ * empregador) e as datas adjacentes tornam a progressão evidente.
+ * =============================================================================
+ */
+
+const NADSON_LINKS: ILinkProps[] = [
+    { icon: Phone, text: "(81) 98978-5231", url: "tel:+5581989785231" },
+    { icon: Mail, text: "nadson.pros@gmail.com", url: "mailto:nadson.pros@gmail.com" },
+    { icon: Linkedin, text: "linkedin.com/in/nadson-alex", url: "https://linkedin.com/in/nadson-alex" },
+    { icon: Github, text: "github.com/Dev-Nadson", url: "https://github.com/Dev-Nadson" },
+]
+
+const NADSON_ACADEMICS: IAcademicProps[] = [
+    {
+        title: "Bacharelado em Ciência da Computação",
+        school: "UNIFAVIP WYDEN",
+        date: "Fevereiro 2025 - Dezembro 2029", // CONFIRMAR: previsão de conclusão
+        description: "Bolsista PROUNI integral. Ênfase em Algoritmos e Estruturas de Dados, Redes de Computadores, Arquitetura de Computadores, Programação em C e Engenharia de Software."
+    },
+    {
+        title: "Ensino Médio Completo",
+        school: "Escola de Referência em Ensino Médio de Panelas",
+        date: "Fevereiro 2021 - Dezembro 2023",
+        description: "Medalhista de Prata na Olimpíada Brasileira de Geografia (2022) e Menção Honrosa na Olimpíada Brasileira de Química (2023)."
+    }
+]
+
+// A Rocketseat saiu de Academics: é certificação, não formação acadêmica.
+const NADSON_CERTIFICATIONS: ICertificationsProps[] = [
+    {
+        title: "Formação Fullstack — Node.js e React",
+        institution: "Rocketseat",
+        date: "2025 • 380 horas",
+        description: "Node.js, React, TypeScript, Fastify, PostgreSQL, testes automatizados e Clean Architecture."
+    }
+]
+
+const NADSON_LANGUAGES: ICompetencesProps = {
+    data: ["Português: Nativo  •  Inglês: Leitura técnica de documentação (intermediário em leitura, básico em conversação)"]
+}
+
 export const NADSON: ProfileData = {
     slug: "nadson",
+    Order: ["AboutMe", "TechStack", "Experiences", "Academics", "Certifications", "Languages"],
     Header: {
         Name: "NADSON ALEX DA SILVA",
-        Subtitle: "Desenvolvedor Fullstack | Especialista em Node.js, React e TypeScript",
-        Links: [
-            { icon: Phone, text: "(81) 98978-5231", url: "tel:+5581989785231" },
-            { icon: Mail, text: "nadson.pros@gmail.com", url: "mailto:nadson.pros@gmail.com" },
-            { icon: Linkedin, text: "linkedin.com/in/nadson-alex", url: "https://linkedin.com/in/nadson-alex" },
-            { icon: Github, text: "github.com/Dev-Nadson", url: "https://github.com/Dev-Nadson" },
+        Subtitle: "Desenvolvedor Fullstack | Node.js, React e TypeScript",
+        Links: NADSON_LINKS
+    },
+    AboutMe: "Desenvolvedor Fullstack com foco em backend, especializado em Node.js, Fastify, TypeScript e PostgreSQL. Experiência em APIs REST multi-tenant, otimização de consultas SQL, cache com Redis e aplicações React modernas. Entrei na CATSUC LABS como Técnico de Suporte em TI e fui promovido a Desenvolvedor após automatizar mais de 18 processos operacionais com Python. Graduando em Ciência da Computação (PROUNI integral).",
+    TechStack: {
+        data: [
+            "Backend: Node.js, Fastify, NestJS, Express, TypeScript, Zod, Prisma ORM, Knex.js",
+            "Bancos de Dados e Cache: PostgreSQL, MySQL, SQLite, Redis (ioredis), modelagem relacional, otimização de queries SQL",
+            "Frontend: React, Next.js, Vite, TanStack Query, Zustand, TailwindCSS, Shadcn UI, Radix UI, React Hook Form",
+            "DevOps e Infra: Docker, Docker Compose, Linux (Ubuntu, CentOS), Nginx, VyOS, CI/CD, GitHub Actions, Git",
+            "Testes e Ferramentas: Vitest, Jest, Supertest, APIs REST, WebSockets, Axios, Postman, Python (Typer, Pandas)"
         ]
     },
-    AboutMe: "Desenvolvedor Fullstack com foco em backend, especializado em Node.js, Fastify, TypeScript e PostgreSQL. Experiência no desenvolvimento de APIs REST multi-tenant, otimização de consultas SQL, estratégias de cache com Redis e aplicações React modernas. Graduando em Ciência da Computação (PROUNI integral).",
     Experiences: [
         {
             enterprise: "CATSUC LABS",
-            date: "Maio 2026 - Atual",
             role: "Desenvolvedor Fullstack Júnior",
+            date: "Maio 2026 - Atual",
             worktype: "Presencial",
             description: [
                 "Desenvolvi APIs REST multi-tenant com Node.js, Fastify e PostgreSQL, implementando isolamento por tenant, soft delete e controle de acesso aos dados.",
-                "Modelei a arquitetura relacional do PostgreSQL utilizando tabelas de associação e regras de integridade para suportar a evolução da aplicação.",
-                "Criei mais de 40 endpoints REST com Fastify, TypeScript e Zod utilizando arquitetura em camadas, validação type-safe e tratamento centralizado de erros, processando mais de 10.000 requisições por dia",
-                "Implementei cache com Redis (ioredis) em mais de 30 funcionalidades da aplicação, incluindo endpoints, serviços e persistência de dados, reduzindo a carga no PostgreSQL e melhorando o tempo de resposta.",
-                "Otimizei consultas SQL com Knex.js e SQL puro para relatórios analíticos, utilizando JOINs, agregações e relacionamentos complexos no PostgreSQL",
-                "Contribuí para uma biblioteca interna com mais de 25 componentes React reutilizáveis utilizando TypeScript, Radix UI e TailwindCSS, além de criar formulários com React Hook Form e Zod, aplicando validações condicionais com superRefine e reduzindo código duplicado em mais de 15 telas.",
-                "Implementei gerenciamento de estado assíncrono e cache com TanStack Query (React Query), utilizando queries, mutations e cache invalidation para otimizar requisições e melhorar a experiência do usuário",
-                "Elevei a cobertura de testes de 12% para 67% com testes unitários, integração (Vitest e Jest) e end-to-end (Supertest), reduzindo regressões e garantindo qualidade durante as entregas"
+                "Criei mais de 40 endpoints REST com Fastify, TypeScript e Zod em arquitetura em camadas, com validação type-safe e tratamento centralizado de erros, atendendo mais de 10.000 requisições por dia.",
+                "Modelei a arquitetura relacional no PostgreSQL com tabelas de associação e regras de integridade, e otimizei consultas com Knex.js e SQL puro (JOINs e agregações) para relatórios analíticos.",
+                "Implementei cache com Redis (ioredis) em mais de 30 funcionalidades, reduzindo a carga no PostgreSQL e o tempo de resposta da aplicação.",
+                "Contribuí para uma biblioteca interna com mais de 25 componentes React em TypeScript, Radix UI e TailwindCSS, com formulários em React Hook Form e Zod e estado assíncrono via TanStack Query, eliminando código duplicado em mais de 15 telas.",
+                "Elevei a cobertura de testes de 12% para 67% com testes unitários, de integração (Vitest e Jest) e end-to-end (Supertest), reduzindo regressões nas entregas."
             ]
         },
         {
-            date: "Julho 2025 - Maio 2026",
+            enterprise: "CATSUC LABS",
             role: "Técnico de Suporte em TI",
+            date: "Julho 2025 - Maio 2026",
             description: [
-                "Realizei manutenção preventiva e corretiva em mais de 300 máquinas virtuais Linux (Ubuntu e CentOS), garantindo disponibilidade superior a 97% em todos os ambientes",
-                "Automatizei mais de 18 processos operacionais com uma CLI em Python com Typer, Paramiko e Pydantic, economizando mais de 120 horas mensais e reduzindo tarefas de até 6 horas para cerca de 30 minutos",
-                "Realizei diagnóstico e resolução de incidentes em ambientes Linux utilizando ferramentas como systemctl, journalctl, netstat e análise de logs, reduzindo o tempo de identificação e correção de falhas críticas",
-                "Administrei mais de 200 configurações de rede utilizando Nginx e VyOS, implementando proxy reverso, DNS, regras de NAT e abertura de portas para garantir disponibilidade e roteamento seguro das aplicações",
-                "Automatizei rotinas de backup para mais de 30 sistemas Linux e ambientes Docker, aumentando a segurança e reduzindo riscos de perda em caso de falhas"
+                "Automatizei mais de 18 processos operacionais com uma CLI em Python (Typer, Paramiko e Pydantic), economizando mais de 120 horas mensais e reduzindo tarefas de até 6 horas para cerca de 30 minutos.",
+                "Realizei manutenção preventiva e corretiva em mais de 300 máquinas virtuais Linux (Ubuntu e CentOS), sustentando disponibilidade superior a 97% nos ambientes.",
+                "Administrei mais de 200 configurações de rede com Nginx e VyOS, implementando proxy reverso, DNS, regras de NAT e liberação de portas para roteamento seguro das aplicações.",
+                "Automatizei rotinas de backup de mais de 30 sistemas Linux e ambientes Docker e diagnostiquei incidentes com systemctl, journalctl, netstat e análise de logs."
             ]
-        },
-        // {
-        //     enterprise: "PANIFICADORA JR",
-        //     date: "Janeiro 2023 - Dezembro 2024",
-        //     role: "Atendente",
-        //     worktype: "Presencial",
-        //     description: [
-        //         "Atendi 50+ clientes/dia mantendo 95% de satisfação através de agilidade, organização e comunicação eficaz em ambiente de alta demanda",
-        //         "Desenvolvi soft skills essenciais para ambientes tech: comunicação clara, trabalho sob pressão, resolução rápida de problemas e foco no cliente"
-        //     ]
-        // }
-    ],
-
-    Academics: [
-        {
-            title: "Bacharelado em Ciência da Computação",
-            school: "UNIFAVIP WYDEN",
-            date: "Fevereiro 2025 - Atual",
-            description:
-                "Bolsista PROUNI integral. Formação focada em Algoritmos e Estruturas de Dados, Redes de Computadores, Arquitetura de Computadores, Programação em C e Engenharia de Software. Prática contínua com Git, GitHub e metodologias ágeis."
-        },
-
-        {
-            title: "Certificação Fullstack - Formação Node.js e React",
-            school: "Rocketseat",
-            date: "2025 • 380 Horas",
-            description:
-                "Formação Fullstack (380h) com foco em Node.js, React, TypeScript, PostgreSQL, Fastify, testes automatizados e Clean Architecture."
-        },
-
-        {
-            title: "Ensino Médio Completo",
-            school: "Escola de Referência em Ensino Médio de Panelas",
-            date: "Fevereiro 2021 - Dezembro 2023",
-            description:
-                "Medalhista de Prata - Olimpíada Brasileira de Geografia (2022). Menção Honrosa - Olimpíada Brasileira de Química (2023)."
         }
+        // A vaga de atendente na PANIFICADORA JR (2023-2024) fica de fora: a
+        // progressão Suporte -> Dev dentro da CATSUC LABS já sustenta o histórico.
     ],
+    Academics: NADSON_ACADEMICS,
+    Certifications: NADSON_CERTIFICATIONS,
+    Languages: NADSON_LANGUAGES
+}
 
+export const NADSON_BACKEND: ProfileData = {
+    slug: "nadson-backend",
+    Order: ["AboutMe", "TechStack", "Experiences", "Academics", "Certifications", "Languages"],
+    Header: {
+        Name: "NADSON ALEX DA SILVA",
+        Subtitle: "Desenvolvedor Backend | Node.js, Fastify, TypeScript e PostgreSQL",
+        Links: NADSON_LINKS
+    },
+    AboutMe: "Desenvolvedor Backend com experiência em APIs REST multi-tenant construídas com Node.js, Fastify, TypeScript e PostgreSQL, em aplicação que processa mais de 10.000 requisições por dia. Atuo em modelagem relacional, otimização de consultas SQL, cache com Redis e testes automatizados. Entrei na CATSUC LABS como Técnico de Suporte em TI e fui promovido a Desenvolvedor após automatizar mais de 18 processos operacionais com Python. Graduando em Ciência da Computação (PROUNI integral).",
     TechStack: {
         data: [
-            "Backend: Node.js, Fastify, NestJS, TypeScript, Express, Prisma ORM, Knex.js, PostgreSQL, MySQL, SQLite, Redis",
-            "Frontend: React, Next.js 16, Vite, TypeScript, React Query, Zustand, TailwindCSS, Shadcn UI, React Hook Form, Zod",
-            "DevOps & Infra: Docker, Docker Compose, Linux (Ubuntu, CentOS), Nginx, CI/CD, Git, GitHub Actions",
-            "Testing & Tools: Vitest, Jest, Axios, Python (Pandas, Typer), REST APIs, WebSockets, Postman, VS Code"
+            "Backend: Node.js, Fastify, NestJS, Express, TypeScript, Zod, Prisma ORM, Knex.js",
+            "Bancos de Dados e Cache: PostgreSQL, MySQL, SQLite, Redis (ioredis), modelagem relacional, otimização de queries SQL",
+            "Arquitetura e Testes: APIs REST, multi-tenant, arquitetura em camadas, Clean Architecture, WebSockets, Vitest, Jest, Supertest",
+            "DevOps e Infra: Docker, Docker Compose, Linux (Ubuntu, CentOS), Nginx, VyOS, CI/CD, GitHub Actions, Git",
+            "Também atuo com: React, Next.js, TanStack Query, TailwindCSS, Python (Typer, Pandas)"
         ]
-    }
+    },
+    Experiences: [
+        {
+            enterprise: "CATSUC LABS",
+            // Título real com o recorte explicitado — fiel ao registrado e casa a
+            // palavra-chave que o ATS da vaga procura.
+            role: "Desenvolvedor Fullstack Júnior (foco em Backend)",
+            date: "Maio 2026 - Atual",
+            worktype: "Presencial",
+            description: [
+                "Desenvolvi APIs REST multi-tenant com Node.js, Fastify e PostgreSQL, implementando isolamento por tenant, soft delete e controle de acesso aos dados.",
+                "Criei mais de 40 endpoints REST com Fastify, TypeScript e Zod em arquitetura em camadas, com validação type-safe e tratamento centralizado de erros, atendendo mais de 10.000 requisições por dia.",
+                "Modelei a arquitetura relacional no PostgreSQL com tabelas de associação e regras de integridade, e otimizei consultas com Knex.js e SQL puro (JOINs e agregações) para relatórios analíticos.",
+                "Implementei cache com Redis (ioredis) em mais de 30 funcionalidades, incluindo endpoints, serviços e persistência, reduzindo a carga no PostgreSQL e o tempo de resposta da API.",
+                "Elevei a cobertura de testes de 12% para 67% com testes unitários, de integração (Vitest e Jest) e end-to-end (Supertest), reduzindo regressões nas entregas.",
+                // Uma linha só preserva o alcance fullstack sem diluir o foco backend.
+                "Integrei o backend a interfaces React com TypeScript e schemas Zod compartilhados, garantindo contratos de API type-safe de ponta a ponta."
+            ]
+        },
+        {
+            enterprise: "CATSUC LABS",
+            role: "Técnico de Suporte em TI",
+            date: "Julho 2025 - Maio 2026",
+            // Experiência mantida em 4 bullets: Linux, Python, Nginx e Docker
+            // contam muito para backend, e a CLI é o que justificou a promoção.
+            description: [
+                "Automatizei mais de 18 processos operacionais com uma CLI em Python (Typer, Paramiko e Pydantic), economizando mais de 120 horas mensais e reduzindo tarefas de até 6 horas para cerca de 30 minutos.",
+                "Realizei manutenção preventiva e corretiva em mais de 300 máquinas virtuais Linux (Ubuntu e CentOS), sustentando disponibilidade superior a 97% nos ambientes.",
+                "Administrei mais de 200 configurações de rede com Nginx e VyOS, implementando proxy reverso, DNS, regras de NAT e liberação de portas para roteamento seguro das aplicações.",
+                "Automatizei rotinas de backup de mais de 30 sistemas Linux e ambientes Docker e diagnostiquei incidentes com systemctl, journalctl, netstat e análise de logs."
+            ]
+        }
+    ],
+    Academics: NADSON_ACADEMICS,
+    Certifications: NADSON_CERTIFICATIONS,
+    Languages: NADSON_LANGUAGES
+}
+
+export const NADSON_FRONTEND: ProfileData = {
+    slug: "nadson-frontend",
+    Order: ["AboutMe", "TechStack", "Experiences", "Academics", "Certifications", "Languages"],
+    Header: {
+        Name: "NADSON ALEX DA SILVA",
+        Subtitle: "Desenvolvedor Frontend | React, TypeScript, Next.js e TailwindCSS",
+        Links: NADSON_LINKS
+    },
+    AboutMe: "Desenvolvedor Frontend com experiência em React e TypeScript, atuando em biblioteca de componentes reutilizáveis, formulários com validação complexa e gerenciamento de estado assíncrono com TanStack Query. Contribuí com mais de 25 componentes acessíveis (Radix UI e TailwindCSS) que eliminaram código duplicado em mais de 15 telas. Também desenvolvo as APIs que consumo (Node.js, Fastify e PostgreSQL), o que me permite alinhar contrato e tipagem de ponta a ponta. Graduando em Ciência da Computação (PROUNI integral).",
+    TechStack: {
+        data: [
+            "Frontend: React 19, Next.js, Vite, TypeScript, JavaScript (ES6+), HTML5, CSS3",
+            "UI e Estilização: TailwindCSS, Shadcn UI, Radix UI (componentes acessíveis), design system e componentes reutilizáveis",
+            "Estado e Dados: TanStack Query (React Query), Zustand, React Hook Form, Zod, Axios, React Router, APIs REST e WebSockets",
+            "Testes e Ferramentas: Vitest, Jest, Git, GitHub, Docker, Postman, VS Code",
+            "Backend (também atuo): Node.js, Fastify, TypeScript, PostgreSQL, Redis, Prisma ORM, Knex.js"
+        ]
+    },
+    Experiences: [
+        {
+            enterprise: "CATSUC LABS",
+            role: "Desenvolvedor Fullstack Júnior (foco em Frontend)",
+            date: "Maio 2026 - Atual",
+            worktype: "Presencial",
+            description: [
+                "Contribuí para uma biblioteca interna com mais de 25 componentes React reutilizáveis em TypeScript, Radix UI e TailwindCSS, eliminando código duplicado em mais de 15 telas.",
+                "Construí formulários complexos com React Hook Form e Zod, aplicando validações condicionais com superRefine e feedback de erro consistente em toda a aplicação.",
+                "Implementei gerenciamento de estado assíncrono com TanStack Query (queries, mutations e cache invalidation), reduzindo requisições redundantes e melhorando a resposta percebida da interface.",
+                "Padronizei a tipagem entre frontend e backend com TypeScript e schemas Zod compartilhados, eliminando divergências de contrato de API em tempo de compilação.",
+                "Elevei a cobertura de testes de 12% para 67% com Vitest e Jest, reduzindo regressões nas entregas de interface.",
+                "Desenvolvi as APIs REST consumidas pelas telas com Node.js, Fastify e PostgreSQL (mais de 40 endpoints e 10.000 requisições por dia), atuando de ponta a ponta na entrega das features."
+            ]
+        },
+        {
+            enterprise: "CATSUC LABS",
+            role: "Técnico de Suporte em TI",
+            date: "Julho 2025 - Maio 2026",
+            // Reduzida a 2 bullets: é a experiência menos relevante para frontend.
+            // Fica a CLI (justifica a promoção) e a base de Linux/Docker/Nginx,
+            // enquadrada pelo uso atual em build e deploy.
+            description: [
+                "Automatizei mais de 18 processos operacionais com uma CLI em Python (Typer, Paramiko e Pydantic), economizando mais de 120 horas mensais.",
+                "Administrei ambientes Linux, Docker e Nginx (proxy reverso e DNS) em mais de 300 máquinas virtuais — base que hoje aplico na configuração de build e deploy das aplicações."
+            ]
+        }
+    ],
+    Academics: NADSON_ACADEMICS,
+    Certifications: NADSON_CERTIFICATIONS,
+    Languages: NADSON_LANGUAGES
 }
 
 export const ANAJULIA: ProfileData = {
@@ -378,7 +501,14 @@ export const ANAJULIA: ProfileData = {
     }
 }
 
-export const PROFILES: ProfileData[] = [NADSON, PEDRO_SUPORTE, PEDRO_DEV, ANAJULIA]
+export const PROFILES: ProfileData[] = [
+    NADSON,
+    NADSON_BACKEND,
+    NADSON_FRONTEND,
+    PEDRO_SUPORTE,
+    PEDRO_DEV,
+    ANAJULIA
+]
 
 export function getProfileBySlug(slug?: string) {
     return PROFILES.find((profile) => profile.slug === slug)
