@@ -1,15 +1,16 @@
-import { Fragment, type ReactNode } from "react"
+import { Fragment, useEffect, useState, type ReactNode } from "react"
+import { Pencil } from "lucide-react"
 import { Header } from "@/components/Header"
 import { AboutMe } from "@/components/AboutMe"
 import { WorkExperience } from "@/components/WorkExperience"
 import { Academic } from "@/components/Academic"
 import { Projects } from "@/components/Projects"
 import { TechStack } from "@/components/TechStack"
-import { getProfileBySlug } from "@/data"
+import { GetCurriculum } from "@/services/curriculum"
 import { Certifications } from "@/components/Certifications"
 import { Competences } from "@/components/Competences"
-import type { SectionName } from "@/typings"
-import { Navigate, useParams } from "react-router-dom"
+import type { ProfileData, SectionName } from "@/typings"
+import { Link, Navigate, useParams } from "react-router-dom"
 
 const DEFAULT_ORDER: SectionName[] = [
     "AboutMe",
@@ -24,9 +25,17 @@ const DEFAULT_ORDER: SectionName[] = [
 
 export function Curriculum() {
     const { slug } = useParams<{ slug: string }>()
-    const profile = getProfileBySlug(slug)
 
-    if (!profile) return <Navigate to="/" replace />
+    // `undefined` enquanto carrega, `null` quando o slug não existe: sem essa
+    // distinção o primeiro render redirecionaria antes da busca terminar.
+    const [profile, setProfile] = useState<ProfileData | null>()
+
+    useEffect(() => {
+        GetCurriculum(slug).then((found) => setProfile(found ?? null))
+    }, [slug])
+
+    if (profile === undefined) return null
+    if (profile === null) return <Navigate to="/" replace />
 
     // Cada seção só entra se o perfil tiver o dado correspondente.
     const sections: Record<SectionName, ReactNode> = {
@@ -44,6 +53,15 @@ export function Curriculum() {
 
     return (
         <>
+            {/* print:hidden — o botão é da tela, não do documento. */}
+            <Link
+                to={`/curriculo/${profile.slug}/editar`}
+                className="flex items-center gap-1 self-end text-xs text-blue-600 hover:underline print:hidden"
+            >
+                <Pencil className="size-3.5" />
+                Editar
+            </Link>
+
             <Header content={profile.Header} />
             {order.map((section) => (
                 <Fragment key={section}>{sections[section]}</Fragment>
