@@ -49,27 +49,43 @@
       "Experiences": [
         {
           "enterprise": "CATSUC LABS",
-          "role": "Desenvolvedor Fullstack Júnior",
-          "date": "Maio 2026 - Atual",
+          "role": "Desenvolvedor Fullstack Pleno",
+          "date": "???? 2026 - Atual",
           "worktype": "Presencial",
           "description": [
-            "Desenvolvi APIs REST multi-tenant com Node.js, Fastify e PostgreSQL, implementando isolamento por tenant, soft delete e controle de acesso aos dados.",
-            "Criei mais de 40 endpoints REST com Fastify, TypeScript e Zod em arquitetura em camadas, com validação type-safe e tratamento centralizado de erros, atendendo mais de 10.000 requisições por dia.",
-            "Modelei a arquitetura relacional no PostgreSQL com tabelas de associação e regras de integridade, e otimizei consultas com Knex.js e SQL puro (JOINs e agregações) para relatórios analíticos.",
-            "Implementei cache com Redis (ioredis) em mais de 30 funcionalidades, reduzindo a carga no PostgreSQL e o tempo de resposta da aplicação.",
-            "Contribuí para uma biblioteca interna com mais de 25 componentes React em TypeScript, Radix UI e TailwindCSS, com formulários em React Hook Form e Zod e estado assíncrono via TanStack Query, eliminando código duplicado em mais de 15 telas.",
-            "Elevei a cobertura de testes de 12% para 67% com testes unitários, de integração (Vitest e Jest) e end-to-end (Supertest), reduzindo regressões nas entregas."
+            "Atuo como principal desenvolvedor de uma aplicação com Node.js, Fastify e PostgreSQL, conduzindo a investigação de problemas, definição de soluções, implementação e evolução técnica do projeto.",
+            "Desenvolvi o fluxo de importação, upload e download de arquivos utilizando Fastify Multipart, streams e AWS S3, mantendo as validações de autenticação e autorização no backend.",
+            "Implementei processamento assíncrono com BullMQ e Redis, utilizando workers e jobs agendados para executar operações em background, com mecanismo de retry para aumentar a resiliência dos processos.",
+            "Implementei autenticação com JWT em cookies HttpOnly e autorização baseada em RBAC, com atualização dinâmica das permissões de usuários durante sessões ativas.",
+            "Estruturei o Redis desde o início do projeto, configurando sua execução com Docker Compose e integrando cache e filas à aplicação.",
+            "Realizo o ciclo completo de entrega das aplicações, desde desenvolvimento e testes até deploy com Docker, Nginx, GitHub Actions, VPS e AWS.",
+            "Configurei dashboards, métricas e alertas no Grafana para monitoramento de mais de 300 máquinas virtuais e atuo na investigação de incidentes em produção por meio de métricas e logs."
+          ]
+        },
+        {
+          "enterprise": "CATSUC LABS",
+          "role": "Desenvolvedor Fullstack Júnior",
+          "date": "Maio 2026 - ???? 2026",
+          "worktype": "Presencial",
+          "description": [
+            "Desenvolvi mais de 40 endpoints REST com Node.js, Fastify, TypeScript e Zod, utilizando arquitetura em camadas, validação type-safe e tratamento centralizado de erros, atendendo mais de 10.000 requisições por dia.",
+            "Desenvolvi APIs multi-tenant com isolamento entre tenants, soft delete e controle de acesso aos dados.",
+            "Modelei estruturas relacionais no PostgreSQL e otimizei consultas com Knex.js e SQL, utilizando JOINs e agregações para operações e relatórios.",
+            "Implementei cache com Redis em mais de 30 funcionalidades, reduzindo a carga sobre o PostgreSQL e melhorando o tempo de resposta da aplicação.",
+            "Contribuí para uma biblioteca interna com mais de 25 componentes React reutilizáveis em TypeScript, Radix UI e TailwindCSS, reduzindo duplicação de código em mais de 15 telas.",
+            "Elevei a cobertura de testes de 12% para 67% com testes unitários, de integração e end-to-end utilizando Vitest, Jest e Supertest."
           ]
         },
         {
           "enterprise": "CATSUC LABS",
           "role": "Técnico de Suporte em TI",
           "date": "Julho 2025 - Maio 2026",
+          "worktype": "Presencial",
           "description": [
-            "Automatizei mais de 18 processos operacionais com uma CLI em Python (Typer, Paramiko e Pydantic), economizando mais de 120 horas mensais e reduzindo tarefas de até 6 horas para cerca de 30 minutos.",
-            "Realizei manutenção preventiva e corretiva em mais de 300 máquinas virtuais Linux (Ubuntu e CentOS), sustentando disponibilidade superior a 97% nos ambientes.",
-            "Administrei mais de 200 configurações de rede com Nginx e VyOS, implementando proxy reverso, DNS, regras de NAT e liberação de portas para roteamento seguro das aplicações.",
-            "Automatizei rotinas de backup de mais de 30 sistemas Linux e ambientes Docker e diagnostiquei incidentes com systemctl, journalctl, netstat e análise de logs."
+            "Automatizei mais de 18 processos operacionais com uma CLI em Python utilizando Typer, Paramiko e Pydantic, economizando mais de 120 horas mensais e reduzindo tarefas de até 6 horas para cerca de 30 minutos.",
+            "Realizei manutenção preventiva e corretiva em mais de 300 máquinas virtuais Linux, sustentando disponibilidade superior a 97% nos ambientes.",
+            "Administrei mais de 200 configurações de rede com Nginx e VyOS, implementando proxy reverso, DNS, NAT e liberação de portas.",
+            "Automatizei rotinas de backup de mais de 30 sistemas Linux e ambientes Docker e atuei no diagnóstico de incidentes por meio de análise de logs e ferramentas de sistema."
           ]
         }
       ],
