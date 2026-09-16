@@ -6,7 +6,7 @@ export function Header({ content }: { content: IHeaderProps }) {
 
     return (
         <header className="flex flex-col items-center leading-tight mb-1">
-            <h1 className="text-[26px] font-bold">{content.Name}</h1>
+            <h1 className="text-[22px] font-bold">{content.Name}</h1>
 
             {content.Subtitle && (
                 <h2 className="text-[18px] mt-0.5">
