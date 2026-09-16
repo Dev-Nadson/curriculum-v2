@@ -11,7 +11,10 @@ export function WorkExperience({ contents }: { contents: IExperienceProps[] }) {
                         <header className="flex justify-between mt-1 leading-tight">
                             <section className="flex flex-col ">
                                 {content.enterprise && <h1 className="font-bold">{content.enterprise}</h1>}
-                                <h2 className="ml-2">{content.role}</h2>
+                                {/* A página usa font-serif, que só tem Regular e Bold: pesos
+                                    intermediários (500/600) caem para um dos dois. O destaque do
+                                    cargo vem então de tamanho e tracking, não de font-weight. */}
+                                <h2 className="ml-2 text-[13.5px] tracking-[0.015em]">{content.role}</h2>
                             </section>
                             <section className="flex flex-col text-end">
                                 {content.worktype && <span>{content.worktype}</span>}
