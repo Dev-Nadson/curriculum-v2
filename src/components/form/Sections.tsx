@@ -107,7 +107,7 @@ export function ExperiencesFields() {
                 <>
                     <div className="grid grid-cols-2 gap-3">
                         <Field label="Empresa">
-                            <Input {...register(`Experiences.${index}.enterprise`)} placeholder="CATSUC LABS" />
+                            <Input {...register(`Experiences.${index}.enterprise`)} placeholder="CATSUC" />
                         </Field>
 
                         <Field label="Cargo" error={errors.Experiences?.[index]?.role?.message}>

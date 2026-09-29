@@ -34,7 +34,7 @@ import db from "./db.json"
  * nadson / nadson-backend / nadson-frontend
  *   - Academics: "Fevereiro 2025 - Dezembro 2029" — confirmar previsão de conclusão.
  *   - A vaga de atendente na PANIFICADORA JR (2023-2024) ficou de fora de
- *     propósito: a progressão Suporte -> Dev dentro da CATSUC LABS já sustenta
+ *     propósito: a progressão Suporte -> Dev dentro da CATSUC já sustenta
  *     o histórico.
  * =============================================================================
  */

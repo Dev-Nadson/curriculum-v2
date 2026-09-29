@@ -12,7 +12,7 @@
       ],
       "Header": {
         "Name": "NADSON ALEX DA SILVA",
-        "Subtitle": "Desenvolvedor Fullstack | Node.js, React e TypeScript",
+        "Subtitle": "Desenvolvedor Fullstack | Node.js, React, TypeScript e IA",
         "Links": [
           {
             "icon": "phone",
@@ -36,41 +36,53 @@
           }
         ]
       },
-      "AboutMe": "Desenvolvedor Fullstack em Node.js, React e TypeScript. Entrei na CATSUC LABS como Técnico de Suporte e cheguei a Pleno em um ano, cada etapa sustentada por entrega medida: mais de 18 processos automatizados em Python (120 horas/mês), APIs que atendem mais de 10.000 requisições por dia e cobertura de testes elevada de 12% para 67%.",
+      "AboutMe": "Meu nome é Nadson Alex, entrei na Catsuc como Técnico de Suporte e cheguei a Pleno em um ano, com entregas mensuráveis: 18+ processos automatizados em Python (120 h/mês), APIs com 10.000+ requisições/dia e cobertura de testes de 12% para 68%. Hoje sou responsável técnico pela NeuroKids, onde projetei a API, o frontend e o pipeline de IA (RAG) de uma plataforma clínica.",
       "Experiences": [
         {
-          "enterprise": "CATSUC LABS",
+          "enterprise": "Catsuc",
           "role": "Desenvolvedor Fullstack Pleno",
           "date": "Julho 2026 - Atual",
           "worktype": "Presencial",
           "description": [
-            "Atuo como principal desenvolvedor de uma aplicação com Node.js, Fastify e PostgreSQL, conduzindo a investigação de problemas, definição de soluções, implementação e evolução técnica do projeto.",
-            "Desenvolvi o fluxo de importação, upload e download de arquivos utilizando Fastify Multipart, streams e AWS S3, processando arquivos grandes sem carregá-los inteiros em memória e mantendo as validações de autenticação e autorização no backend.",
-            "Implementei processamento assíncrono com BullMQ e Redis, utilizando workers e jobs agendados para executar operações em background, com mecanismo de retry para aumentar a resiliência dos processos.",
-            "Implementei autenticação com JWT em cookies HttpOnly e autorização baseada em RBAC, com atualização dinâmica das permissões durante sessões ativas, refletindo mudanças de papel sem exigir novo login.",
+            "Atuo como principal desenvolvedor de uma aplicação Node.js, Fastify e PostgreSQL, conduzindo a investigação de problemas, a definição de soluções, implementação e evolução técnica do projeto.",
+            "Implementei upload e download por streaming (Fastify Multipart → AWS S3) de arquivos grandes, com uso de memória constante.",
+            "Estruturei processamento assíncrono com BullMQ e Redis, com workers, jobs agendados e retry para executar operações em background.",
+            "Implementei autenticação JWT em cookies HttpOnly e RBAC com atualização de permissões em sessões ativas, sem exigir novo login.",
             "Realizo o ciclo completo de entrega das aplicações, do desenvolvimento ao deploy com Docker, Nginx, GitHub Actions, VPS e AWS.",
-            "Configurei dashboards, métricas e alertas no Grafana para monitoramento de mais de 300 máquinas virtuais e atuo na investigação de incidentes em produção a partir desses painéis e da análise de logs."
+            "Configurei dashboards, métricas e alertas no Grafana e atuo na investigação de incidentes em produção por métricas e logs."
           ]
         },
         {
           "role": "Desenvolvedor Fullstack Júnior",
           "date": "Fevereiro 2026 - Julho 2026",
           "description": [
-            "Desenvolvi mais de 40 endpoints REST multi-tenant com Node.js, Fastify, TypeScript e Zod, com isolamento entre tenants, validação type-safe e tratamento centralizado de erros, atendendo mais de 10.000 requisições por dia.",
-            "Modelei a arquitetura relacional no PostgreSQL com tabelas de associação e regras de integridade, e otimizei consultas com Knex.js e SQL puro, usando JOINs e agregações para relatórios analíticos e operações do dia a dia.",
-            "Reduzi a carga sobre o PostgreSQL com cache em Redis (ioredis) aplicado a mais de 30 funcionalidades, incluindo endpoints, serviços e camada de persistência, melhorando o tempo de resposta da aplicação.",
-            "Contribuí para uma biblioteca interna com mais de 25 componentes React reutilizáveis em TypeScript, Radix UI e TailwindCSS, com formulários em React Hook Form e Zod, reduzindo duplicação de código em mais de 15 telas.",
-            "Elevei a cobertura de testes de 12% para 67% com testes unitários, de integração e end-to-end utilizando Vitest, Jest e Supertest."
+            "Desenvolvi mais de 40 endpoints REST multi-tenant com Fastify, TypeScript e Zod, com isolamento entre tenants, atendendo mais de 10.000 requisições por dia.",
+            "Reduzi a carga sobre o PostgreSQL com cache em Redis em mais de 30 funcionalidades, melhorando o tempo de resposta da aplicação.",
+            "Contribuí para uma biblioteca de mais de 25 componentes React com Radix UI e TailwindCSS, reduzindo duplicação em mais de 15 telas.",
+            "Elevei a cobertura de testes de 12% para 68% com testes unitários, de integração e end-to-end (Vitest, Jest e Supertest)."
           ]
         },
         {
           "role": "Técnico de Suporte em TI",
           "date": "Julho 2025 - Fevereiro 2026",
           "description": [
-            "Automatizei mais de 18 processos operacionais com uma CLI em Python utilizando Typer, Paramiko e Pydantic, economizando mais de 120 horas mensais e reduzindo tarefas de até 6 horas para cerca de 30 minutos.",
-            "Realizei manutenção preventiva e corretiva em mais de 300 máquinas virtuais Linux (Ubuntu e CentOS), com atualizações de pacotes, ajustes de configuração e acompanhamento de recursos, sustentando disponibilidade superior a 97%.",
-            "Administrei mais de 200 configurações de rede com Nginx e VyOS, implementando proxy reverso, DNS, NAT e liberação de portas.",
+            "Automatizei mais de 18 processos operacionais com uma CLI em Python (Typer, Paramiko, Pydantic), economizando mais de 120 horas mensais e reduzindo tarefas de 6 horas para 30 minutos.",
+            "Mantive mais de 300 máquinas virtuais Linux com disponibilidade acima de 97%, administrando proxy reverso e rede com Nginx e VyOS.",
             "Criei rotinas automatizadas de backup para mais de 30 sistemas Linux e ambientes Docker e atuei no diagnóstico de incidentes em produção com systemctl, journalctl, netstat e análise de logs."
+          ]
+        },
+        {
+          "enterprise": "NeuroKids",
+          "role": "Engenheiro de Software Pleno",
+          "date": "Maio 2026 - Atual",
+          "worktype": "Remoto",
+          "description": [
+            "Responsável técnico pelo produto: defini arquitetura e stack e projetei uma API REST multi-tenant em NestJS com mais de 110 rotas em mais de 25 módulos, documentada com Swagger.",
+            "Desenvolvi mais de 20 telas responsivas em Next.js, React, TypeScript e Shadcn/UI, com React Query, Zustand, React Hook Form e Zod.",
+            "Implementei RBAC com Guards e Decorators personalizados, isolando os dados de cada clínica e o acesso de cada profissional aos pacientes, sobre 20 tabelas em Prisma e PostgreSQL.",
+            "Criei uma trilha de auditoria para toda escrita da API via Decorator, com estado antes e depois nos dados de saúde.",
+            "Construí um pipeline de RAG para documentos clínicos: extração de PDFs, classificação por LLM (OpenAI, JSON schema estrito), chunking por seção e embeddings no pgvector com índice HNSW.",
+            "Adotei desenvolvimento assistido por IA com Claude Code, guiado por regras de projeto versionadas, specs e workplans escritos antes de cada feature e uma wiki técnica da arquitetura."
           ]
         }
       ],
@@ -79,22 +91,16 @@
           "title": "Bacharelado em Ciência da Computação",
           "school": "UNIFAVIP WYDEN",
           "date": "Fevereiro 2025 - Dezembro 2029",
-          "description": "Bolsista PROUNI integral. Ênfase em Algoritmos e Estruturas de Dados, Redes de Computadores, Arquitetura de Computadores, Programação em C e Engenharia de Software."
-        },
-        {
-          "title": "Ensino Médio Completo",
-          "school": "Escola de Referência em Ensino Médio de Panelas",
-          "date": "Fevereiro 2021 - Dezembro 2023",
-          "description": "Medalhista de Prata na Olimpíada Brasileira de Geografia (2022) e Menção Honrosa na Olimpíada Brasileira de Química (2023)."
+          "description": "Bolsista PROUNI integral. Ênfase em Algoritmos e Estruturas de Dados, Redes e Engenharia de Software."
         }
       ],
       "TechStack": {
         "data": [
-          "Backend: Node.js, Fastify, NestJS, Express, TypeScript, Zod, Prisma ORM, Knex.js, Fastify Multipart e streams",
-          "Bancos de Dados, Cache e Filas: PostgreSQL, MySQL, SQLite, Redis (ioredis), BullMQ, otimização de queries SQL",
+          "Backend: Node.js, NestJS, Fastify, Express, TypeScript, Prisma ORM, Knex.js, Zod, APIs REST",
           "Frontend: React, Next.js, Vite, TanStack Query, Zustand, TailwindCSS, Shadcn UI, Radix UI, React Hook Form",
-          "DevOps, Infra e Observabilidade: Docker, Docker Compose, Linux Server, Nginx, VyOS, AWS, CI/CD, GitHub Actions, Grafana, Git",
-          "Segurança, Testes e Ferramentas: JWT HttpOnly, RBAC, Vitest, Jest, Supertest, APIs REST, WebSockets, Axios, Python (Typer, Pandas)"
+          "Dados e Filas: PostgreSQL, pgvector, MySQL, Redis, BullMQ",
+          "IA: OpenAI API (embeddings e structured outputs), RAG, busca híbrida, Claude Code",
+          "DevOps e Testes: Docker, Nginx, Linux, AWS, Cloudflare R2, GitHub Actions, Grafana, Vitest, Jest, Supertest, Python"
         ]
       },
       "Languages": {
@@ -139,7 +145,7 @@
           }
         ]
       },
-      "AboutMe": "Desenvolvedor Backend em Node.js, Fastify, TypeScript e PostgreSQL. Entrei na CATSUC LABS como Técnico de Suporte e cheguei a Pleno em um ano, cada etapa sustentada por entrega medida: mais de 18 processos automatizados em Python (120 horas/mês), mais de 40 endpoints que atendem 10.000 requisições por dia e cobertura de testes de 12% para 67%. Hoje sou o principal desenvolvedor da aplicação, da modelagem no PostgreSQL ao deploy e à observabilidade com Grafana.",
+      "AboutMe": "Desenvolvedor Backend em Node.js, Fastify, TypeScript e PostgreSQL. Entrei na CATSUC como Técnico de Suporte e cheguei a Pleno em um ano, cada etapa sustentada por entrega medida: mais de 18 processos automatizados em Python (120 horas/mês), mais de 40 endpoints que atendem 10.000 requisições por dia e cobertura de testes de 12% para 68%. Hoje sou o principal desenvolvedor da aplicação, da modelagem no PostgreSQL ao deploy e à observabilidade com Grafana.",
       "TechStack": {
         "data": [
           "Backend: Node.js, Fastify, NestJS, Express, TypeScript, Zod, Prisma ORM, Knex.js, Fastify Multipart e streams",
@@ -151,7 +157,7 @@
       },
       "Experiences": [
         {
-          "enterprise": "CATSUC LABS",
+          "enterprise": "CATSUC",
           "role": "Desenvolvedor Fullstack Pleno (foco em Backend)",
           "date": "Julho 2026 - Atual",
           "worktype": "Presencial",
@@ -163,19 +169,19 @@
           ]
         },
         {
-          "enterprise": "CATSUC LABS",
+          "enterprise": "CATSUC",
           "role": "Desenvolvedor Fullstack Júnior (foco em Backend)",
           "date": "Fevereiro 2026 - Julho 2026",
           "description": [
             "Desenvolvi mais de 40 endpoints REST multi-tenant com Node.js, Fastify, TypeScript e Zod, com isolamento entre tenants, validação type-safe e tratamento centralizado de erros, atendendo mais de 10.000 requisições por dia.",
             "Modelei estruturas relacionais no PostgreSQL e otimizei consultas com Knex.js e SQL, utilizando JOINs e agregações para operações e relatórios.",
             "Implementei cache com Redis em mais de 30 funcionalidades, reduzindo a carga sobre o PostgreSQL e melhorando o tempo de resposta da aplicação.",
-            "Elevei a cobertura de testes de 12% para 67% com testes unitários, de integração e end-to-end utilizando Vitest, Jest e Supertest.",
+            "Elevei a cobertura de testes de 12% para 68% com testes unitários, de integração e end-to-end utilizando Vitest, Jest e Supertest.",
             "Integrei o backend a interfaces React com TypeScript e schemas Zod compartilhados, garantindo contratos de API type-safe de ponta a ponta."
           ]
         },
         {
-          "enterprise": "CATSUC LABS",
+          "enterprise": "CATSUC",
           "role": "Técnico de Suporte em TI",
           "date": "Julho 2025 - Fevereiro 2026",
           "description": [
@@ -250,7 +256,7 @@
           }
         ]
       },
-      "AboutMe": "Desenvolvedor Frontend em React, TypeScript e TailwindCSS. Entrei na CATSUC LABS como Técnico de Suporte e cheguei a Pleno em um ano, cada etapa sustentada por entrega medida: mais de 25 componentes reutilizáveis que eliminaram duplicação em mais de 15 telas, cobertura de testes de 12% para 67% e APIs que atendem mais de 10.000 requisições por dia. Também construo o backend que consumo, o que mantém contrato e tipagem alinhados de ponta a ponta.",
+      "AboutMe": "Desenvolvedor Frontend em React, TypeScript e TailwindCSS. Entrei na CATSUC como Técnico de Suporte e cheguei a Pleno em um ano, cada etapa sustentada por entrega medida: mais de 25 componentes reutilizáveis que eliminaram duplicação em mais de 15 telas, cobertura de testes de 12% para 68% e APIs que atendem mais de 10.000 requisições por dia. Também construo o backend que consumo, o que mantém contrato e tipagem alinhados de ponta a ponta.",
       "TechStack": {
         "data": [
           "Frontend: React 19, Next.js, Vite, TypeScript, JavaScript (ES6+), HTML5, CSS3",
@@ -262,7 +268,7 @@
       },
       "Experiences": [
         {
-          "enterprise": "CATSUC LABS",
+          "enterprise": "CATSUC",
           "role": "Desenvolvedor Fullstack Pleno (foco em Frontend)",
           "date": "Julho 2026 - Atual",
           "worktype": "Presencial",
@@ -274,7 +280,7 @@
           ]
         },
         {
-          "enterprise": "CATSUC LABS",
+          "enterprise": "CATSUC",
           "role": "Desenvolvedor Fullstack Júnior (foco em Frontend)",
           "date": "Fevereiro 2026 - Julho 2026",
           "description": [
@@ -282,12 +288,12 @@
             "Construí formulários complexos com React Hook Form e Zod, aplicando validações condicionais com superRefine e feedback de erro consistente em toda a aplicação.",
             "Implementei gerenciamento de estado assíncrono com TanStack Query (queries, mutations e cache invalidation), reduzindo requisições redundantes e melhorando a resposta percebida da interface.",
             "Padronizei a tipagem entre frontend e backend com TypeScript e schemas Zod compartilhados, eliminando divergências de contrato de API em tempo de compilação.",
-            "Elevei a cobertura de testes de 12% para 67% com testes unitários, de integração e end-to-end utilizando Vitest, Jest e Supertest.",
+            "Elevei a cobertura de testes de 12% para 68% com testes unitários, de integração e end-to-end utilizando Vitest, Jest e Supertest.",
             "Desenvolvi as APIs REST consumidas pelas telas com Node.js, Fastify e PostgreSQL (mais de 40 endpoints e 10.000 requisições por dia), atuando de ponta a ponta na entrega das features."
           ]
         },
         {
-          "enterprise": "CATSUC LABS",
+          "enterprise": "CATSUC",
           "role": "Técnico de Suporte em TI",
           "date": "Julho 2025 - Fevereiro 2026",
           "description": [
